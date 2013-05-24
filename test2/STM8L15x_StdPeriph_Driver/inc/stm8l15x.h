@@ -23,6 +23,8 @@
 #ifndef __STM8L15x_H
  #define __STM8L15x_H
 
+#define assert_param(...)
+
 /** @addtogroup STM8L15x_StdPeriph_Driver
   * @{
   */
