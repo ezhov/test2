@@ -12,7 +12,7 @@ struct interrupt_vector {
 	interrupt_handler_t interrupt_handler;
 };
 
-@far @interrupt void NonHandledInterrupt (void)
+INTERRUPT_HANDLER(NonHandledInterrupt,0)
 {
 	/* in order to detect unexpected events during development, 
 	   it is recommended to set a breakpoint on the following instruction
@@ -20,14 +20,7 @@ struct interrupt_vector {
 	return;
 }
 
-bool toggle;
-
-INTERRUPT_HANDLER(UserHandler,9)
-{
-  toggle = TRUE;
-  EXTI_ClearITPendingBit(EXTI_IT_Pin1);
-}
-
+INTERRUPT_HANDLER(UserHandler,9);
 
 extern void _stext();     /* startup routine */
 

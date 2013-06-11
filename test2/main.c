@@ -1,12 +1,17 @@
 #include "stm8l15x.h"
 
+#include "lcd.h"
+
 #include "stm8l15x_gpio.h"
 #include "stm8l15x_exti.h"
-#include "stm8l15x_lcd.h"
-#include "stm8l15x_rtc.h"
-#include "stm8l15x_clk.h"
 
-extern bool toggle;
+bool toggle;
+
+INTERRUPT_HANDLER(UserHandler,9)
+{
+  toggle = TRUE;
+  EXTI_ClearITPendingBit(EXTI_IT_Pin1);
+}
 
 void startGpio()
 {
@@ -16,67 +21,6 @@ void startGpio()
   GPIO_ToggleBits(GPIOE, GPIO_Pin_7);
 }
 
-void LCD_GLASS_Init(void)
-{
-
-  /* Enable LCD/RTC clock */
-  CLK_PeripheralClockConfig(CLK_Peripheral_RTC, ENABLE);
-  CLK_RTCClockConfig(CLK_RTCCLKSource_LSI, CLK_RTCCLKDiv_1);
-  CLK_PeripheralClockConfig(CLK_Peripheral_LCD, ENABLE);
-
-  //#ifdef USE_LSE
-  //  CLK_RTCClockConfig(CLK_RTCCLKSource_LSE, CLK_RTCCLKDiv_1);
-  //#else
-  //  CLK_RTCClockConfig(CLK_RTCCLKSource_LSI, CLK_RTCCLKDiv_1);
-  //#endif
-
-  /* Initialize the LCD */
-  LCD_Init(LCD_Prescaler_1, LCD_Divider_31, LCD_Duty_1_4, 
-      LCD_Bias_1_3, LCD_VoltageSource_Internal);
-
-  /* Mask register
-  For declare the segements used.
-  in the Discovery we use 0 to 23 segments. */
-  LCD_PortMaskConfig(LCD_PortMaskRegister_0, 0xFF);
-  LCD_PortMaskConfig(LCD_PortMaskRegister_1, 0xFF);
-  LCD_PortMaskConfig(LCD_PortMaskRegister_2, 0xff);
-
-  /* To set contrast to mean value */
-  LCD_ContrastConfig(LCD_Contrast_3V0);
-
-  LCD_DeadTimeConfig(LCD_DeadTime_0);
-  LCD_PulseOnDurationConfig(LCD_PulseOnDuration_1);
-
-  /* Enable LCD peripheral */ 
-  LCD_Cmd(ENABLE);
-
-  LCD_WriteRAM(LCD_RAMRegister_0, 0xff);
-  ;
-}
-
-void startLcd()
-{
-  int i;
-  long j;
-  CLK_PeripheralClockConfig(CLK_Peripheral_RTC, ENABLE);
-  CLK_RTCClockConfig(CLK_RTCCLKSource_LSI, CLK_RTCCLKDiv_1);
-
-
-  CLK_PeripheralClockConfig(CLK_Peripheral_LCD, ENABLE);
-
-  LCD_Init(LCD_Prescaler_1, LCD_Divider_16, LCD_Duty_1_4, LCD_Bias_1_3, LCD_VoltageSource_Internal);
-  LCD_PortMaskConfig(LCD_PortMaskRegister_0, 0xff);
-  LCD_PortMaskConfig(LCD_PortMaskRegister_1, 0xff);
-  LCD_PortMaskConfig(LCD_PortMaskRegister_2, 0xff);
-  LCD_Cmd(ENABLE);
-  for (i=LCD_RAMRegister_0; i<=LCD_RAMRegister_21; i++)
-  {
-    LCD_WriteRAM(i, 0xff);
-    for (j=0;j<500;j++)
-      ;
-  }
-
-}
 
 void mainLoop()
 {
@@ -85,17 +29,46 @@ void mainLoop()
       GPIO_ToggleBits(GPIOE, GPIO_Pin_7);
       GPIO_ToggleBits(GPIOC, GPIO_Pin_7);
       toggle = FALSE;
-      LCD_WriteRAM(LCD_RAMRegister_0, 0x00);
-
     }
   }
 }
 
+void delay (uint32_t interval)
+{
+  int i;
+  for (i=0; i<interval; i++)
+    ;
+}
+
+const uint16_t CapLetterMap[26]=
+    {
+        /* A      B      C      D      E      F      G      H      I  */
+        0xFE00,0x6711,0x1d00,0x4711,0x9d00,0x9c00,0x3f00,0xfa00,0x0011,
+        /* J      K      L      M      N      O      P      Q      R  */
+        0x5300,0x9844,0x1900,0x5a42,0x5a06,0x5f00,0xFC00,0x5F04,0xFC04,
+        /* S      T      U      V      W      X      Y      Z  */
+        0xAF00,0x0411,0x5b00,0x18c0,0x5a84,0x00c6,0x0052,0x05c0
+    };
+
 int main( void )
 {
+  int i = 0, j;
   startGpio();
   startLcd();
-  //LCD_GLASS_Init();
+
+
+  while (TRUE)
+  {
+    for (j=0; j<6; j++)
+      writeChar(CapLetterMap[i], j);
+    delay(10000);
+    for (j=0; j<6; j++)
+      writeChar(0x0000, j);
+    i++;
+    if (i == 26)
+      i=0;
+  }
+
   enableInterrupts();
   mainLoop();
   return 0;
