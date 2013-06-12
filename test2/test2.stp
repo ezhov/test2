@@ -292,8 +292,13 @@ String.6.0=2013,6,5,0,17,47
 [Root.Source Files.Source Files\lib]
 ElemType=Folder
 PathName=Source Files\lib
-Child=Root.Source Files.Source Files\lib.stm8l15x_stdperiph_driver\src\stm8l15x_clk.c
+Child=Root.Source Files.Source Files\lib.stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c
 Next=Root.Source Files.Source Files\usr
+
+[Root.Source Files.Source Files\lib.stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c]
+ElemType=File
+PathName=stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c
+Next=Root.Source Files.Source Files\lib.stm8l15x_stdperiph_driver\src\stm8l15x_clk.c
 
 [Root.Source Files.Source Files\lib.stm8l15x_stdperiph_driver\src\stm8l15x_clk.c]
 ElemType=File
@@ -317,7 +322,12 @@ PathName=stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c
 [Root.Source Files.Source Files\usr]
 ElemType=Folder
 PathName=Source Files\usr
-Child=Root.Source Files.Source Files\usr.lcd.c
+Child=Root.Source Files.Source Files\usr.rtc.c
+
+[Root.Source Files.Source Files\usr.rtc.c]
+ElemType=File
+PathName=rtc.c
+Next=Root.Source Files.Source Files\usr.lcd.c
 
 [Root.Source Files.Source Files\usr.lcd.c]
 ElemType=File
@@ -336,7 +346,7 @@ PathName=stm8_interrupt_vector.c
 [Root.Include Files]
 ElemType=Folder
 PathName=Include Files
-Child=Root.Include Files.lcd.h
+Child=Root.Include Files.rtc.h
 Config.0=Root.Include Files.Config.0
 Config.1=Root.Include Files.Config.1
 
@@ -405,6 +415,11 @@ String.3.0=
 String.4.0=
 String.5.0=
 String.6.0=2013,6,5,0,17,47
+
+[Root.Include Files.rtc.h]
+ElemType=File
+PathName=rtc.h
+Next=Root.Include Files.lcd.h
 
 [Root.Include Files.lcd.h]
 ElemType=File

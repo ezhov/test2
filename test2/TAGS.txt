@@ -79,6 +79,7 @@ AES_SR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2600;"	macro
 AES_SR_WRERR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2618;"	macro
 AES_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2594;"	typedef	typeref:struct:AES_struct
 AES_struct	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2587;"	struct
+ALRAWF_TIMEOUT	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	34;"	macro	file:
 ALRMAR1	stm8l15x_stdperiph_driver\inc\stm8l15x.h	314;"	member	struct:RTC_struct
 ALRMAR2	stm8l15x_stdperiph_driver\inc\stm8l15x.h	315;"	member	struct:RTC_struct
 ALRMAR3	stm8l15x_stdperiph_driver\inc\stm8l15x.h	316;"	member	struct:RTC_struct
@@ -115,11 +116,15 @@ BYTE_0	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2830;"	macro
 BYTE_1	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2831;"	macro
 BYTE_2	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2832;"	macro
 BYTE_3	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2833;"	macro
-BitAction	stm8l15x_stdperiph_driver\inc\stm8l15x.h	211;"	typedef	typeref:enum:__anon2
+Bcd2ToByte	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1770;"	function	file:	signature:(uint8_t Value)
+Bcd2ToByte	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	48;"	prototype	file:	signature:(uint8_t Value)
+BitAction	stm8l15x_stdperiph_driver\inc\stm8l15x.h	211;"	typedef	typeref:enum:__anon3
 BitClr	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2851;"	macro
 BitSet	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2852;"	macro
-BitStatus	stm8l15x_stdperiph_driver\inc\stm8l15x.h	211;"	typedef	typeref:enum:__anon2
+BitStatus	stm8l15x_stdperiph_driver\inc\stm8l15x.h	211;"	typedef	typeref:enum:__anon3
 BitVal	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2853;"	macro
+ByteToBcd2	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1752;"	function	file:	signature:(uint8_t Value)
+ByteToBcd2	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	47;"	prototype	file:	signature:(uint8_t Value)
 CALRH	stm8l15x_stdperiph_driver\inc\stm8l15x.h	327;"	member	struct:RTC_struct
 CALRL	stm8l15x_stdperiph_driver\inc\stm8l15x.h	328;"	member	struct:RTC_struct
 CBEEPR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	711;"	member	struct:CLK_struct
@@ -179,10 +184,10 @@ CLK	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2700;"	macro
 CLK_AdjustHSICalibrationValue	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	415;"	prototype	signature:(uint8_t CLK_HSICalibrationValue)
 CLK_AdjustHSICalibrationValue	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	108;"	function	signature:(uint8_t CLK_HSICalibrationValue)
 CLK_BASE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2652;"	macro
-CLK_BEEPCLKSource_LSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	98;"	enumerator	enum:__anon10
-CLK_BEEPCLKSource_LSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	97;"	enumerator	enum:__anon10
-CLK_BEEPCLKSource_Off	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	96;"	enumerator	enum:__anon10
-CLK_BEEPCLKSource_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	99;"	typedef	typeref:enum:__anon10
+CLK_BEEPCLKSource_LSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	98;"	enumerator	enum:__anon11
+CLK_BEEPCLKSource_LSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	97;"	enumerator	enum:__anon11
+CLK_BEEPCLKSource_Off	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	96;"	enumerator	enum:__anon11
+CLK_BEEPCLKSource_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	99;"	typedef	typeref:enum:__anon11
 CLK_BEEPClockConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	429;"	prototype	signature:(CLK_BEEPCLKSource_TypeDef CLK_BEEPCLKSource)
 CLK_BEEPClockConfig	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	425;"	function	signature:(CLK_BEEPCLKSource_TypeDef CLK_BEEPCLKSource)
 CLK_CBEEPR_BEEPSWBSY	stm8l15x_stdperiph_driver\inc\stm8l15x.h	812;"	macro
@@ -190,24 +195,24 @@ CLK_CBEEPR_CLKBEEPSEL	stm8l15x_stdperiph_driver\inc\stm8l15x.h	811;"	macro
 CLK_CBEEPR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	735;"	macro
 CLK_CCOConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	427;"	prototype	signature:(CLK_CCOSource_TypeDef CLK_CCOSource, CLK_CCODiv_TypeDef CLK_CCODiv)
 CLK_CCOConfig	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	391;"	function	signature:(CLK_CCOSource_TypeDef CLK_CCOSource, CLK_CCODiv_TypeDef CLK_CCODiv)
-CLK_CCODiv_1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	83;"	enumerator	enum:__anon9
-CLK_CCODiv_16	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	87;"	enumerator	enum:__anon9
-CLK_CCODiv_2	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	84;"	enumerator	enum:__anon9
-CLK_CCODiv_32	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	88;"	enumerator	enum:__anon9
-CLK_CCODiv_4	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	85;"	enumerator	enum:__anon9
-CLK_CCODiv_64	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	89;"	enumerator	enum:__anon9
-CLK_CCODiv_8	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	86;"	enumerator	enum:__anon9
-CLK_CCODiv_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	90;"	typedef	typeref:enum:__anon9
+CLK_CCODiv_1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	83;"	enumerator	enum:__anon10
+CLK_CCODiv_16	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	87;"	enumerator	enum:__anon10
+CLK_CCODiv_2	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	84;"	enumerator	enum:__anon10
+CLK_CCODiv_32	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	88;"	enumerator	enum:__anon10
+CLK_CCODiv_4	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	85;"	enumerator	enum:__anon10
+CLK_CCODiv_64	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	89;"	enumerator	enum:__anon10
+CLK_CCODiv_8	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	86;"	enumerator	enum:__anon10
+CLK_CCODiv_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	90;"	typedef	typeref:enum:__anon10
 CLK_CCOR_CCODIV	stm8l15x_stdperiph_driver\inc\stm8l15x.h	785;"	macro
 CLK_CCOR_CCOSEL	stm8l15x_stdperiph_driver\inc\stm8l15x.h	786;"	macro
 CLK_CCOR_CCOSWBSY	stm8l15x_stdperiph_driver\inc\stm8l15x.h	787;"	macro
 CLK_CCOR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	729;"	macro
-CLK_CCOSource_HSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	75;"	enumerator	enum:__anon8
-CLK_CCOSource_HSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	73;"	enumerator	enum:__anon8
-CLK_CCOSource_LSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	76;"	enumerator	enum:__anon8
-CLK_CCOSource_LSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	74;"	enumerator	enum:__anon8
-CLK_CCOSource_Off	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	72;"	enumerator	enum:__anon8
-CLK_CCOSource_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	77;"	typedef	typeref:enum:__anon8
+CLK_CCOSource_HSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	75;"	enumerator	enum:__anon9
+CLK_CCOSource_HSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	73;"	enumerator	enum:__anon9
+CLK_CCOSource_LSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	76;"	enumerator	enum:__anon9
+CLK_CCOSource_LSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	74;"	enumerator	enum:__anon9
+CLK_CCOSource_Off	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	72;"	enumerator	enum:__anon9
+CLK_CCOSource_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	77;"	typedef	typeref:enum:__anon9
 CLK_CKDIVR_CKM	stm8l15x_stdperiph_driver\inc\stm8l15x.h	748;"	macro
 CLK_CKDIVR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	723;"	macro
 CLK_CRTCR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	724;"	macro
@@ -237,26 +242,26 @@ CLK_ECKCR_LSEBYP	stm8l15x_stdperiph_driver\inc\stm8l15x.h	789;"	macro
 CLK_ECKCR_LSEON	stm8l15x_stdperiph_driver\inc\stm8l15x.h	792;"	macro
 CLK_ECKCR_LSERDY	stm8l15x_stdperiph_driver\inc\stm8l15x.h	791;"	macro
 CLK_ECKCR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	730;"	macro
-CLK_FLAG_AUX	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	198;"	enumerator	enum:__anon15
-CLK_FLAG_BEEPSWBSY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	200;"	enumerator	enum:__anon15
-CLK_FLAG_CCOBSY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	194;"	enumerator	enum:__anon15
-CLK_FLAG_CSSD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	199;"	enumerator	enum:__anon15
-CLK_FLAG_EEBUSY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	202;"	enumerator	enum:__anon15
-CLK_FLAG_EEREADY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	201;"	enumerator	enum:__anon15
-CLK_FLAG_HSEPD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	204;"	enumerator	enum:__anon15
-CLK_FLAG_HSERDY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	195;"	enumerator	enum:__anon15
-CLK_FLAG_HSIPD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	206;"	enumerator	enum:__anon15
-CLK_FLAG_HSIRDY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	192;"	enumerator	enum:__anon15
-CLK_FLAG_LSECSSF	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	208;"	enumerator	enum:__anon15
-CLK_FLAG_LSEPD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	203;"	enumerator	enum:__anon15
-CLK_FLAG_LSERDY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	196;"	enumerator	enum:__anon15
-CLK_FLAG_LSIPD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	205;"	enumerator	enum:__anon15
-CLK_FLAG_LSIRDY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	193;"	enumerator	enum:__anon15
-CLK_FLAG_REGREADY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	207;"	enumerator	enum:__anon15
-CLK_FLAG_RTCCLKSWF	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	209;"	enumerator	enum:__anon15
-CLK_FLAG_RTCSWBSY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	191;"	enumerator	enum:__anon15
-CLK_FLAG_SWBSY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	197;"	enumerator	enum:__anon15
-CLK_FLAG_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	210;"	typedef	typeref:enum:__anon15
+CLK_FLAG_AUX	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	198;"	enumerator	enum:__anon16
+CLK_FLAG_BEEPSWBSY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	200;"	enumerator	enum:__anon16
+CLK_FLAG_CCOBSY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	194;"	enumerator	enum:__anon16
+CLK_FLAG_CSSD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	199;"	enumerator	enum:__anon16
+CLK_FLAG_EEBUSY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	202;"	enumerator	enum:__anon16
+CLK_FLAG_EEREADY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	201;"	enumerator	enum:__anon16
+CLK_FLAG_HSEPD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	204;"	enumerator	enum:__anon16
+CLK_FLAG_HSERDY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	195;"	enumerator	enum:__anon16
+CLK_FLAG_HSIPD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	206;"	enumerator	enum:__anon16
+CLK_FLAG_HSIRDY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	192;"	enumerator	enum:__anon16
+CLK_FLAG_LSECSSF	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	208;"	enumerator	enum:__anon16
+CLK_FLAG_LSEPD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	203;"	enumerator	enum:__anon16
+CLK_FLAG_LSERDY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	196;"	enumerator	enum:__anon16
+CLK_FLAG_LSIPD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	205;"	enumerator	enum:__anon16
+CLK_FLAG_LSIRDY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	193;"	enumerator	enum:__anon16
+CLK_FLAG_REGREADY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	207;"	enumerator	enum:__anon16
+CLK_FLAG_RTCCLKSWF	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	209;"	enumerator	enum:__anon16
+CLK_FLAG_RTCSWBSY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	191;"	enumerator	enum:__anon16
+CLK_FLAG_SWBSY	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	197;"	enumerator	enum:__anon16
+CLK_FLAG_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	210;"	typedef	typeref:enum:__anon16
 CLK_GetClockFreq	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	425;"	prototype	signature:(void)
 CLK_GetClockFreq	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	293;"	function	signature:(void)
 CLK_GetFlagStatus	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	433;"	prototype	signature:(CLK_FLAG_TypeDef CLK_FLAG)
@@ -267,10 +272,10 @@ CLK_GetSYSCLKSource	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	422;"	prototype
 CLK_GetSYSCLKSource	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	250;"	function	signature:(void)
 CLK_HSEConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	417;"	prototype	signature:(CLK_HSE_TypeDef CLK_HSE)
 CLK_HSEConfig	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	149;"	function	signature:(CLK_HSE_TypeDef CLK_HSE)
-CLK_HSE_Bypass	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	46;"	enumerator	enum:__anon5
-CLK_HSE_OFF	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	44;"	enumerator	enum:__anon5
-CLK_HSE_ON	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	45;"	enumerator	enum:__anon5
-CLK_HSE_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	47;"	typedef	typeref:enum:__anon5
+CLK_HSE_Bypass	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	46;"	enumerator	enum:__anon6
+CLK_HSE_OFF	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	44;"	enumerator	enum:__anon6
+CLK_HSE_ON	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	45;"	enumerator	enum:__anon6
+CLK_HSE_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	47;"	typedef	typeref:enum:__anon6
 CLK_HSICALR_HSICAL	stm8l15x_stdperiph_driver\inc\stm8l15x.h	814;"	macro
 CLK_HSICALR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	736;"	macro
 CLK_HSICmd	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	414;"	prototype	signature:(FunctionalState NewState)
@@ -281,10 +286,10 @@ CLK_HSIUNLCKR_HSIUNLCK	stm8l15x_stdperiph_driver\inc\stm8l15x.h	818;"	macro
 CLK_HSIUNLCKR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	738;"	macro
 CLK_HaltConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	431;"	prototype	signature:(CLK_Halt_TypeDef CLK_Halt, FunctionalState NewState)
 CLK_HaltConfig	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	503;"	function	signature:(CLK_Halt_TypeDef CLK_Halt, FunctionalState NewState)
-CLK_Halt_BEEPRunning	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	225;"	enumerator	enum:__anon17
-CLK_Halt_FastWakeup	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	226;"	enumerator	enum:__anon17
-CLK_Halt_SlowWakeup	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	227;"	enumerator	enum:__anon17
-CLK_Halt_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	229;"	typedef	typeref:enum:__anon17
+CLK_Halt_BEEPRunning	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	225;"	enumerator	enum:__anon18
+CLK_Halt_FastWakeup	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	226;"	enumerator	enum:__anon18
+CLK_Halt_SlowWakeup	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	227;"	enumerator	enum:__anon18
+CLK_Halt_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	229;"	typedef	typeref:enum:__anon18
 CLK_ICKCR_BEEPAHALT	stm8l15x_stdperiph_driver\inc\stm8l15x.h	754;"	macro
 CLK_ICKCR_FHWU	stm8l15x_stdperiph_driver\inc\stm8l15x.h	755;"	macro
 CLK_ICKCR_HSION	stm8l15x_stdperiph_driver\inc\stm8l15x.h	760;"	macro
@@ -295,18 +300,18 @@ CLK_ICKCR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	725;"	macro
 CLK_ICKCR_SAHALT	stm8l15x_stdperiph_driver\inc\stm8l15x.h	756;"	macro
 CLK_ITConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	426;"	prototype	signature:(CLK_IT_TypeDef CLK_IT, FunctionalState NewState)
 CLK_ITConfig	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	338;"	function	signature:(CLK_IT_TypeDef CLK_IT, FunctionalState NewState)
-CLK_IT_CSSD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	216;"	enumerator	enum:__anon16
-CLK_IT_LSECSSF	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	218;"	enumerator	enum:__anon16
-CLK_IT_SWIF	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	217;"	enumerator	enum:__anon16
-CLK_IT_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	219;"	typedef	typeref:enum:__anon16
+CLK_IT_CSSD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	216;"	enumerator	enum:__anon17
+CLK_IT_LSECSSF	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	218;"	enumerator	enum:__anon17
+CLK_IT_SWIF	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	217;"	enumerator	enum:__anon17
+CLK_IT_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	219;"	typedef	typeref:enum:__anon17
 CLK_LSEClockSecuritySystemEnable	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	439;"	prototype	signature:(void)
 CLK_LSEClockSecuritySystemEnable	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	713;"	function	signature:(void)
 CLK_LSEConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	418;"	prototype	signature:(CLK_LSE_TypeDef CLK_LSE)
 CLK_LSEConfig	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	173;"	function	signature:(CLK_LSE_TypeDef CLK_LSE)
-CLK_LSE_Bypass	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	55;"	enumerator	enum:__anon6
-CLK_LSE_OFF	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	53;"	enumerator	enum:__anon6
-CLK_LSE_ON	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	54;"	enumerator	enum:__anon6
-CLK_LSE_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	56;"	typedef	typeref:enum:__anon6
+CLK_LSE_Bypass	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	55;"	enumerator	enum:__anon7
+CLK_LSE_OFF	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	53;"	enumerator	enum:__anon7
+CLK_LSE_ON	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	54;"	enumerator	enum:__anon7
+CLK_LSE_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	56;"	typedef	typeref:enum:__anon7
 CLK_LSICmd	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	416;"	prototype	signature:(FunctionalState NewState)
 CLK_LSICmd	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	123;"	function	signature:(FunctionalState NewState)
 CLK_MainRegulatorCmd	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	432;"	prototype	signature:(FunctionalState NewState)
@@ -336,28 +341,28 @@ CLK_PCKENR3_UASRT2	stm8l15x_stdperiph_driver\inc\stm8l15x.h	782;"	macro
 CLK_PCKENR3_USART3	stm8l15x_stdperiph_driver\inc\stm8l15x.h	783;"	macro
 CLK_PeripheralClockConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	430;"	prototype	signature:(CLK_Peripheral_TypeDef CLK_Peripheral, FunctionalState NewState)
 CLK_PeripheralClockConfig	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	443;"	function	signature:(CLK_Peripheral_TypeDef CLK_Peripheral, FunctionalState NewState)
-CLK_Peripheral_ADC1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	145;"	enumerator	enum:__anon13
-CLK_Peripheral_AES	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	152;"	enumerator	enum:__anon13
-CLK_Peripheral_BEEP	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	143;"	enumerator	enum:__anon13
-CLK_Peripheral_BOOTROM	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	151;"	enumerator	enum:__anon13
-CLK_Peripheral_COMP	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	150;"	enumerator	enum:__anon13
-CLK_Peripheral_CSSLSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	157;"	enumerator	enum:__anon13
-CLK_Peripheral_DAC	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	144;"	enumerator	enum:__anon13
-CLK_Peripheral_DMA1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	149;"	enumerator	enum:__anon13
-CLK_Peripheral_I2C1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	140;"	enumerator	enum:__anon13
-CLK_Peripheral_LCD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	148;"	enumerator	enum:__anon13
-CLK_Peripheral_RTC	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	147;"	enumerator	enum:__anon13
-CLK_Peripheral_SPI1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	141;"	enumerator	enum:__anon13
-CLK_Peripheral_SPI2	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	154;"	enumerator	enum:__anon13
-CLK_Peripheral_TIM1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	146;"	enumerator	enum:__anon13
-CLK_Peripheral_TIM2	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	137;"	enumerator	enum:__anon13
-CLK_Peripheral_TIM3	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	138;"	enumerator	enum:__anon13
-CLK_Peripheral_TIM4	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	139;"	enumerator	enum:__anon13
-CLK_Peripheral_TIM5	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	153;"	enumerator	enum:__anon13
-CLK_Peripheral_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	158;"	typedef	typeref:enum:__anon13
-CLK_Peripheral_USART1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	142;"	enumerator	enum:__anon13
-CLK_Peripheral_USART2	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	155;"	enumerator	enum:__anon13
-CLK_Peripheral_USART3	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	156;"	enumerator	enum:__anon13
+CLK_Peripheral_ADC1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	145;"	enumerator	enum:__anon14
+CLK_Peripheral_AES	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	152;"	enumerator	enum:__anon14
+CLK_Peripheral_BEEP	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	143;"	enumerator	enum:__anon14
+CLK_Peripheral_BOOTROM	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	151;"	enumerator	enum:__anon14
+CLK_Peripheral_COMP	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	150;"	enumerator	enum:__anon14
+CLK_Peripheral_CSSLSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	157;"	enumerator	enum:__anon14
+CLK_Peripheral_DAC	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	144;"	enumerator	enum:__anon14
+CLK_Peripheral_DMA1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	149;"	enumerator	enum:__anon14
+CLK_Peripheral_I2C1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	140;"	enumerator	enum:__anon14
+CLK_Peripheral_LCD	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	148;"	enumerator	enum:__anon14
+CLK_Peripheral_RTC	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	147;"	enumerator	enum:__anon14
+CLK_Peripheral_SPI1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	141;"	enumerator	enum:__anon14
+CLK_Peripheral_SPI2	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	154;"	enumerator	enum:__anon14
+CLK_Peripheral_TIM1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	146;"	enumerator	enum:__anon14
+CLK_Peripheral_TIM2	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	137;"	enumerator	enum:__anon14
+CLK_Peripheral_TIM3	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	138;"	enumerator	enum:__anon14
+CLK_Peripheral_TIM4	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	139;"	enumerator	enum:__anon14
+CLK_Peripheral_TIM5	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	153;"	enumerator	enum:__anon14
+CLK_Peripheral_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	158;"	typedef	typeref:enum:__anon14
+CLK_Peripheral_USART1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	142;"	enumerator	enum:__anon14
+CLK_Peripheral_USART2	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	155;"	enumerator	enum:__anon14
+CLK_Peripheral_USART3	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	156;"	enumerator	enum:__anon14
 CLK_REGCSR_EEBUSY	stm8l15x_stdperiph_driver\inc\stm8l15x.h	821;"	macro
 CLK_REGCSR_EEREADY	stm8l15x_stdperiph_driver\inc\stm8l15x.h	820;"	macro
 CLK_REGCSR_HSEPD	stm8l15x_stdperiph_driver\inc\stm8l15x.h	823;"	macro
@@ -367,20 +372,20 @@ CLK_REGCSR_LSIPD	stm8l15x_stdperiph_driver\inc\stm8l15x.h	824;"	macro
 CLK_REGCSR_REGOFF	stm8l15x_stdperiph_driver\inc\stm8l15x.h	826;"	macro
 CLK_REGCSR_REGREADY	stm8l15x_stdperiph_driver\inc\stm8l15x.h	827;"	macro
 CLK_REGCSR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	739;"	macro
-CLK_RTCCLKDiv_1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	116;"	enumerator	enum:__anon12
-CLK_RTCCLKDiv_16	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	120;"	enumerator	enum:__anon12
-CLK_RTCCLKDiv_2	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	117;"	enumerator	enum:__anon12
-CLK_RTCCLKDiv_32	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	121;"	enumerator	enum:__anon12
-CLK_RTCCLKDiv_4	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	118;"	enumerator	enum:__anon12
-CLK_RTCCLKDiv_64	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	122;"	enumerator	enum:__anon12
-CLK_RTCCLKDiv_8	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	119;"	enumerator	enum:__anon12
-CLK_RTCCLKDiv_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	123;"	typedef	typeref:enum:__anon12
-CLK_RTCCLKSource_HSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	108;"	enumerator	enum:__anon11
-CLK_RTCCLKSource_HSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	106;"	enumerator	enum:__anon11
-CLK_RTCCLKSource_LSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	109;"	enumerator	enum:__anon11
-CLK_RTCCLKSource_LSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	107;"	enumerator	enum:__anon11
-CLK_RTCCLKSource_Off	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	105;"	enumerator	enum:__anon11
-CLK_RTCCLKSource_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	110;"	typedef	typeref:enum:__anon11
+CLK_RTCCLKDiv_1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	116;"	enumerator	enum:__anon13
+CLK_RTCCLKDiv_16	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	120;"	enumerator	enum:__anon13
+CLK_RTCCLKDiv_2	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	117;"	enumerator	enum:__anon13
+CLK_RTCCLKDiv_32	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	121;"	enumerator	enum:__anon13
+CLK_RTCCLKDiv_4	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	118;"	enumerator	enum:__anon13
+CLK_RTCCLKDiv_64	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	122;"	enumerator	enum:__anon13
+CLK_RTCCLKDiv_8	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	119;"	enumerator	enum:__anon13
+CLK_RTCCLKDiv_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	123;"	typedef	typeref:enum:__anon13
+CLK_RTCCLKSource_HSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	108;"	enumerator	enum:__anon12
+CLK_RTCCLKSource_HSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	106;"	enumerator	enum:__anon12
+CLK_RTCCLKSource_LSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	109;"	enumerator	enum:__anon12
+CLK_RTCCLKSource_LSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	107;"	enumerator	enum:__anon12
+CLK_RTCCLKSource_Off	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	105;"	enumerator	enum:__anon12
+CLK_RTCCLKSource_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	110;"	typedef	typeref:enum:__anon12
 CLK_RTCCLKSwitchOnLSEFailureEnable	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	440;"	prototype	signature:(void)
 CLK_RTCCLKSwitchOnLSEFailureEnable	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	725;"	function	signature:(void)
 CLK_RTCClockConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	428;"	prototype	signature:(CLK_RTCCLKSource_TypeDef CLK_RTCCLKSource, CLK_RTCCLKDiv_TypeDef CLK_RTCCLKDiv)
@@ -396,24 +401,24 @@ CLK_SWR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	732;"	macro
 CLK_SWR_SWI	stm8l15x_stdperiph_driver\inc\stm8l15x.h	798;"	macro
 CLK_SYSCLKDivConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	420;"	prototype	signature:(CLK_SYSCLKDiv_TypeDef CLK_SYSCLKDiv)
 CLK_SYSCLKDivConfig	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	211;"	function	signature:(CLK_SYSCLKDiv_TypeDef CLK_SYSCLKDiv)
-CLK_SYSCLKDiv_1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	164;"	enumerator	enum:__anon14
-CLK_SYSCLKDiv_128	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	171;"	enumerator	enum:__anon14
-CLK_SYSCLKDiv_16	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	168;"	enumerator	enum:__anon14
-CLK_SYSCLKDiv_2	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	165;"	enumerator	enum:__anon14
-CLK_SYSCLKDiv_32	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	169;"	enumerator	enum:__anon14
-CLK_SYSCLKDiv_4	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	166;"	enumerator	enum:__anon14
-CLK_SYSCLKDiv_64	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	170;"	enumerator	enum:__anon14
-CLK_SYSCLKDiv_8	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	167;"	enumerator	enum:__anon14
-CLK_SYSCLKDiv_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	172;"	typedef	typeref:enum:__anon14
+CLK_SYSCLKDiv_1	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	164;"	enumerator	enum:__anon15
+CLK_SYSCLKDiv_128	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	171;"	enumerator	enum:__anon15
+CLK_SYSCLKDiv_16	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	168;"	enumerator	enum:__anon15
+CLK_SYSCLKDiv_2	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	165;"	enumerator	enum:__anon15
+CLK_SYSCLKDiv_32	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	169;"	enumerator	enum:__anon15
+CLK_SYSCLKDiv_4	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	166;"	enumerator	enum:__anon15
+CLK_SYSCLKDiv_64	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	170;"	enumerator	enum:__anon15
+CLK_SYSCLKDiv_8	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	167;"	enumerator	enum:__anon15
+CLK_SYSCLKDiv_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	172;"	typedef	typeref:enum:__anon15
 CLK_SYSCLKSourceConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	419;"	prototype	signature:(CLK_SYSCLKSource_TypeDef CLK_SYSCLKSource)
 CLK_SYSCLKSourceConfig	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	196;"	function	signature:(CLK_SYSCLKSource_TypeDef CLK_SYSCLKSource)
 CLK_SYSCLKSourceSwitchCmd	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	421;"	prototype	signature:(FunctionalState NewState)
 CLK_SYSCLKSourceSwitchCmd	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	223;"	function	signature:(FunctionalState NewState)
-CLK_SYSCLKSource_HSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	64;"	enumerator	enum:__anon7
-CLK_SYSCLKSource_HSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	62;"	enumerator	enum:__anon7
-CLK_SYSCLKSource_LSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	65;"	enumerator	enum:__anon7
-CLK_SYSCLKSource_LSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	63;"	enumerator	enum:__anon7
-CLK_SYSCLKSource_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	66;"	typedef	typeref:enum:__anon7
+CLK_SYSCLKSource_HSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	64;"	enumerator	enum:__anon8
+CLK_SYSCLKSource_HSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	62;"	enumerator	enum:__anon8
+CLK_SYSCLKSource_LSE	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	65;"	enumerator	enum:__anon8
+CLK_SYSCLKSource_LSI	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	63;"	enumerator	enum:__anon8
+CLK_SYSCLKSource_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h	66;"	typedef	typeref:enum:__anon8
 CLK_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x.h	718;"	typedef	typeref:struct:CLK_struct
 CLK_struct	stm8l15x_stdperiph_driver\inc\stm8l15x.h	698;"	struct
 CM0ARH	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2393;"	member	struct:DMA_Channel_struct
@@ -523,6 +528,8 @@ CSSLSE_CSR_SWITCHF	stm8l15x_stdperiph_driver\inc\stm8l15x.h	556;"	macro
 CSSLSE_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x.h	540;"	typedef	typeref:struct:CSSLSE_struct
 CSSLSE_struct	stm8l15x_stdperiph_driver\inc\stm8l15x.h	536;"	struct
 CSSR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	710;"	member	struct:CLK_struct
+CapLetterMap	lcd.c	39;"	variable
+CapLetterMapRu	lcd.c	54;"	variable
 ChgBit	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2822;"	macro
 ClrBit	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2820;"	macro
 DAC	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2720;"	macro
@@ -576,7 +583,7 @@ DER	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1566;"	member	struct:TIM1_struct
 DER	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1802;"	member	struct:TIM_struct
 DER	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1983;"	member	struct:TIM4_struct
 DINR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2591;"	member	struct:AES_struct
-DISABLE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	213;"	enumerator	enum:__anon3
+DISABLE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	213;"	enumerator	enum:__anon4
 DM	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2726;"	macro
 DMA1	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2721;"	macro
 DMA1_BASE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2642;"	macro
@@ -649,8 +656,8 @@ EEPROM	stm8l15x_stdperiph_driver\inc\stm8l15x.h	127;"	macro
 EGR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1570;"	member	struct:TIM1_struct
 EGR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1806;"	member	struct:TIM_struct
 EGR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1986;"	member	struct:TIM4_struct
-ENABLE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	213;"	enumerator	enum:__anon3
-ERROR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	216;"	enumerator	enum:__anon4
+ENABLE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	213;"	enumerator	enum:__anon4
+ERROR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	216;"	enumerator	enum:__anon5
 ETR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1565;"	member	struct:TIM1_struct
 ETR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1801;"	member	struct:TIM_struct
 EXTI	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2697;"	macro
@@ -700,50 +707,50 @@ EXTI_GetPinSensitivity	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	238;"	proto
 EXTI_GetPinSensitivity	stm8l15x_stdperiph_driver\src\stm8l15x_exti.c	281;"	function	signature:(EXTI_Pin_TypeDef EXTI_Pin)
 EXTI_GetPortSensitivity	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	237;"	prototype	signature:(EXTI_Port_TypeDef EXTI_Port)
 EXTI_GetPortSensitivity	stm8l15x_stdperiph_driver\src\stm8l15x_exti.c	252;"	function	signature:(EXTI_Port_TypeDef EXTI_Port)
-EXTI_HalfPort_B_LSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	60;"	enumerator	enum:__anon19
-EXTI_HalfPort_B_MSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	61;"	enumerator	enum:__anon19
-EXTI_HalfPort_D_LSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	62;"	enumerator	enum:__anon19
-EXTI_HalfPort_D_MSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	63;"	enumerator	enum:__anon19
-EXTI_HalfPort_E_LSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	64;"	enumerator	enum:__anon19
-EXTI_HalfPort_E_MSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	65;"	enumerator	enum:__anon19
-EXTI_HalfPort_F_LSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	66;"	enumerator	enum:__anon19
-EXTI_HalfPort_F_MSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	67;"	enumerator	enum:__anon19
-EXTI_HalfPort_G_LSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	68;"	enumerator	enum:__anon19
-EXTI_HalfPort_G_MSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	69;"	enumerator	enum:__anon19
-EXTI_HalfPort_H_LSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	70;"	enumerator	enum:__anon19
-EXTI_HalfPort_H_MSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	71;"	enumerator	enum:__anon19
-EXTI_HalfPort_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	72;"	typedef	typeref:enum:__anon19
-EXTI_IT_Pin0	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	122;"	enumerator	enum:__anon22
-EXTI_IT_Pin1	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	123;"	enumerator	enum:__anon22
-EXTI_IT_Pin2	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	124;"	enumerator	enum:__anon22
-EXTI_IT_Pin3	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	125;"	enumerator	enum:__anon22
-EXTI_IT_Pin4	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	126;"	enumerator	enum:__anon22
-EXTI_IT_Pin5	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	127;"	enumerator	enum:__anon22
-EXTI_IT_Pin6	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	128;"	enumerator	enum:__anon22
-EXTI_IT_Pin7	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	129;"	enumerator	enum:__anon22
-EXTI_IT_PortB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	130;"	enumerator	enum:__anon22
-EXTI_IT_PortD	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	131;"	enumerator	enum:__anon22
-EXTI_IT_PortE	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	132;"	enumerator	enum:__anon22
-EXTI_IT_PortF	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	133;"	enumerator	enum:__anon22
-EXTI_IT_PortG	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	134;"	enumerator	enum:__anon22
-EXTI_IT_PortH	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	135;"	enumerator	enum:__anon22
-EXTI_IT_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	136;"	typedef	typeref:enum:__anon22
-EXTI_Pin_0	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	102;"	enumerator	enum:__anon21
-EXTI_Pin_1	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	103;"	enumerator	enum:__anon21
-EXTI_Pin_2	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	104;"	enumerator	enum:__anon21
-EXTI_Pin_3	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	105;"	enumerator	enum:__anon21
-EXTI_Pin_4	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	106;"	enumerator	enum:__anon21
-EXTI_Pin_5	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	107;"	enumerator	enum:__anon21
-EXTI_Pin_6	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	108;"	enumerator	enum:__anon21
-EXTI_Pin_7	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	109;"	enumerator	enum:__anon21
-EXTI_Pin_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	110;"	typedef	typeref:enum:__anon21
-EXTI_Port_B	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	84;"	enumerator	enum:__anon20
-EXTI_Port_D	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	85;"	enumerator	enum:__anon20
-EXTI_Port_E	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	86;"	enumerator	enum:__anon20
-EXTI_Port_F	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	87;"	enumerator	enum:__anon20
-EXTI_Port_G	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	88;"	enumerator	enum:__anon20
-EXTI_Port_H	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	89;"	enumerator	enum:__anon20
-EXTI_Port_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	90;"	typedef	typeref:enum:__anon20
+EXTI_HalfPort_B_LSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	60;"	enumerator	enum:__anon20
+EXTI_HalfPort_B_MSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	61;"	enumerator	enum:__anon20
+EXTI_HalfPort_D_LSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	62;"	enumerator	enum:__anon20
+EXTI_HalfPort_D_MSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	63;"	enumerator	enum:__anon20
+EXTI_HalfPort_E_LSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	64;"	enumerator	enum:__anon20
+EXTI_HalfPort_E_MSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	65;"	enumerator	enum:__anon20
+EXTI_HalfPort_F_LSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	66;"	enumerator	enum:__anon20
+EXTI_HalfPort_F_MSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	67;"	enumerator	enum:__anon20
+EXTI_HalfPort_G_LSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	68;"	enumerator	enum:__anon20
+EXTI_HalfPort_G_MSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	69;"	enumerator	enum:__anon20
+EXTI_HalfPort_H_LSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	70;"	enumerator	enum:__anon20
+EXTI_HalfPort_H_MSB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	71;"	enumerator	enum:__anon20
+EXTI_HalfPort_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	72;"	typedef	typeref:enum:__anon20
+EXTI_IT_Pin0	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	122;"	enumerator	enum:__anon23
+EXTI_IT_Pin1	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	123;"	enumerator	enum:__anon23
+EXTI_IT_Pin2	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	124;"	enumerator	enum:__anon23
+EXTI_IT_Pin3	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	125;"	enumerator	enum:__anon23
+EXTI_IT_Pin4	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	126;"	enumerator	enum:__anon23
+EXTI_IT_Pin5	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	127;"	enumerator	enum:__anon23
+EXTI_IT_Pin6	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	128;"	enumerator	enum:__anon23
+EXTI_IT_Pin7	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	129;"	enumerator	enum:__anon23
+EXTI_IT_PortB	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	130;"	enumerator	enum:__anon23
+EXTI_IT_PortD	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	131;"	enumerator	enum:__anon23
+EXTI_IT_PortE	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	132;"	enumerator	enum:__anon23
+EXTI_IT_PortF	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	133;"	enumerator	enum:__anon23
+EXTI_IT_PortG	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	134;"	enumerator	enum:__anon23
+EXTI_IT_PortH	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	135;"	enumerator	enum:__anon23
+EXTI_IT_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	136;"	typedef	typeref:enum:__anon23
+EXTI_Pin_0	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	102;"	enumerator	enum:__anon22
+EXTI_Pin_1	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	103;"	enumerator	enum:__anon22
+EXTI_Pin_2	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	104;"	enumerator	enum:__anon22
+EXTI_Pin_3	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	105;"	enumerator	enum:__anon22
+EXTI_Pin_4	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	106;"	enumerator	enum:__anon22
+EXTI_Pin_5	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	107;"	enumerator	enum:__anon22
+EXTI_Pin_6	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	108;"	enumerator	enum:__anon22
+EXTI_Pin_7	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	109;"	enumerator	enum:__anon22
+EXTI_Pin_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	110;"	typedef	typeref:enum:__anon22
+EXTI_Port_B	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	84;"	enumerator	enum:__anon21
+EXTI_Port_D	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	85;"	enumerator	enum:__anon21
+EXTI_Port_E	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	86;"	enumerator	enum:__anon21
+EXTI_Port_F	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	87;"	enumerator	enum:__anon21
+EXTI_Port_G	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	88;"	enumerator	enum:__anon21
+EXTI_Port_H	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	89;"	enumerator	enum:__anon21
+EXTI_Port_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	90;"	typedef	typeref:enum:__anon21
 EXTI_SR1_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	926;"	macro
 EXTI_SR2_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	927;"	macro
 EXTI_SelectPort	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	235;"	prototype	signature:(EXTI_Port_TypeDef EXTI_Port)
@@ -754,15 +761,15 @@ EXTI_SetPinSensitivity	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	234;"	proto
 EXTI_SetPinSensitivity	stm8l15x_stdperiph_driver\src\stm8l15x_exti.c	108;"	function	signature:(EXTI_Pin_TypeDef EXTI_Pin, EXTI_Trigger_TypeDef EXTI_Trigger)
 EXTI_SetPortSensitivity	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	233;"	prototype	signature:(EXTI_Port_TypeDef EXTI_Port, EXTI_Trigger_TypeDef EXTI_Trigger)
 EXTI_SetPortSensitivity	stm8l15x_stdperiph_driver\src\stm8l15x_exti.c	71;"	function	signature:(EXTI_Port_TypeDef EXTI_Port, EXTI_Trigger_TypeDef EXTI_Trigger)
-EXTI_Trigger_Falling	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	47;"	enumerator	enum:__anon18
-EXTI_Trigger_Falling_Low	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	45;"	enumerator	enum:__anon18
-EXTI_Trigger_Rising	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	46;"	enumerator	enum:__anon18
-EXTI_Trigger_Rising_Falling	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	48;"	enumerator	enum:__anon18
-EXTI_Trigger_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	49;"	typedef	typeref:enum:__anon18
+EXTI_Trigger_Falling	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	47;"	enumerator	enum:__anon19
+EXTI_Trigger_Falling_Low	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	45;"	enumerator	enum:__anon19
+EXTI_Trigger_Rising	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	46;"	enumerator	enum:__anon19
+EXTI_Trigger_Rising_Falling	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	48;"	enumerator	enum:__anon19
+EXTI_Trigger_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h	49;"	typedef	typeref:enum:__anon19
 EXTI_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x.h	916;"	typedef	typeref:struct:EXTI_struct
 EXTI_struct	stm8l15x_stdperiph_driver\inc\stm8l15x.h	904;"	struct
-ErrorStatus	stm8l15x_stdperiph_driver\inc\stm8l15x.h	216;"	typedef	typeref:enum:__anon4
-FALSE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	209;"	enumerator	enum:__anon1
+ErrorStatus	stm8l15x_stdperiph_driver\inc\stm8l15x.h	216;"	typedef	typeref:enum:__anon5
+FALSE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	209;"	enumerator	enum:__anon2
 FAR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	103;"	macro
 FAR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	110;"	macro
 FAR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	124;"	macro
@@ -793,8 +800,8 @@ FLASH_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x.h	996;"	typedef	typeref:str
 FLASH_struct	stm8l15x_stdperiph_driver\inc\stm8l15x.h	988;"	struct
 FREQR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1050;"	member	struct:I2C_struct
 FRQ	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2525;"	member	struct:LCD_struct
-FlagStatus	stm8l15x_stdperiph_driver\inc\stm8l15x.h	211;"	typedef	typeref:enum:__anon2
-FunctionalState	stm8l15x_stdperiph_driver\inc\stm8l15x.h	213;"	typedef	typeref:enum:__anon3
+FlagStatus	stm8l15x_stdperiph_driver\inc\stm8l15x.h	211;"	typedef	typeref:enum:__anon3
+FunctionalState	stm8l15x_stdperiph_driver\inc\stm8l15x.h	213;"	typedef	typeref:enum:__anon4
 GCR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	611;"	member	struct:CFG_struct
 GCSR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2378;"	member	struct:DMA_struct
 GIR1	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2379;"	member	struct:DMA_struct
@@ -825,32 +832,32 @@ GPIO_ExternalPullUpConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	149;"	pr
 GPIO_ExternalPullUpConfig	stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c	251;"	function	signature:(GPIO_TypeDef* GPIOx, uint8_t GPIO_Pin, FunctionalState NewState)
 GPIO_Init	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	139;"	prototype	signature:(GPIO_TypeDef* GPIOx, uint8_t GPIO_Pin, GPIO_Mode_TypeDef GPIO_Mode)
 GPIO_Init	stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c	63;"	function	signature:(GPIO_TypeDef* GPIOx, uint8_t GPIO_Pin, GPIO_Mode_TypeDef GPIO_Mode)
-GPIO_Mode_In_FL_IT	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	56;"	enumerator	enum:__anon23
-GPIO_Mode_In_FL_No_IT	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	54;"	enumerator	enum:__anon23
-GPIO_Mode_In_PU_IT	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	57;"	enumerator	enum:__anon23
-GPIO_Mode_In_PU_No_IT	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	55;"	enumerator	enum:__anon23
-GPIO_Mode_Out_OD_HiZ_Fast	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	62;"	enumerator	enum:__anon23
-GPIO_Mode_Out_OD_HiZ_Slow	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	64;"	enumerator	enum:__anon23
-GPIO_Mode_Out_OD_Low_Fast	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	58;"	enumerator	enum:__anon23
-GPIO_Mode_Out_OD_Low_Slow	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	60;"	enumerator	enum:__anon23
-GPIO_Mode_Out_PP_High_Fast	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	63;"	enumerator	enum:__anon23
-GPIO_Mode_Out_PP_High_Slow	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	65;"	enumerator	enum:__anon23
-GPIO_Mode_Out_PP_Low_Fast	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	59;"	enumerator	enum:__anon23
-GPIO_Mode_Out_PP_Low_Slow	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	61;"	enumerator	enum:__anon23
-GPIO_Mode_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	66;"	typedef	typeref:enum:__anon23
+GPIO_Mode_In_FL_IT	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	56;"	enumerator	enum:__anon24
+GPIO_Mode_In_FL_No_IT	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	54;"	enumerator	enum:__anon24
+GPIO_Mode_In_PU_IT	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	57;"	enumerator	enum:__anon24
+GPIO_Mode_In_PU_No_IT	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	55;"	enumerator	enum:__anon24
+GPIO_Mode_Out_OD_HiZ_Fast	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	62;"	enumerator	enum:__anon24
+GPIO_Mode_Out_OD_HiZ_Slow	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	64;"	enumerator	enum:__anon24
+GPIO_Mode_Out_OD_Low_Fast	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	58;"	enumerator	enum:__anon24
+GPIO_Mode_Out_OD_Low_Slow	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	60;"	enumerator	enum:__anon24
+GPIO_Mode_Out_PP_High_Fast	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	63;"	enumerator	enum:__anon24
+GPIO_Mode_Out_PP_High_Slow	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	65;"	enumerator	enum:__anon24
+GPIO_Mode_Out_PP_Low_Fast	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	59;"	enumerator	enum:__anon24
+GPIO_Mode_Out_PP_Low_Slow	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	61;"	enumerator	enum:__anon24
+GPIO_Mode_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	66;"	typedef	typeref:enum:__anon24
 GPIO_ODR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	257;"	macro
-GPIO_Pin_0	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	75;"	enumerator	enum:__anon24
-GPIO_Pin_1	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	76;"	enumerator	enum:__anon24
-GPIO_Pin_2	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	77;"	enumerator	enum:__anon24
-GPIO_Pin_3	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	78;"	enumerator	enum:__anon24
-GPIO_Pin_4	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	79;"	enumerator	enum:__anon24
-GPIO_Pin_5	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	80;"	enumerator	enum:__anon24
-GPIO_Pin_6	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	81;"	enumerator	enum:__anon24
-GPIO_Pin_7	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	82;"	enumerator	enum:__anon24
-GPIO_Pin_All	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	85;"	enumerator	enum:__anon24
-GPIO_Pin_HNib	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	84;"	enumerator	enum:__anon24
-GPIO_Pin_LNib	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	83;"	enumerator	enum:__anon24
-GPIO_Pin_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	86;"	typedef	typeref:enum:__anon24
+GPIO_Pin_0	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	75;"	enumerator	enum:__anon25
+GPIO_Pin_1	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	76;"	enumerator	enum:__anon25
+GPIO_Pin_2	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	77;"	enumerator	enum:__anon25
+GPIO_Pin_3	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	78;"	enumerator	enum:__anon25
+GPIO_Pin_4	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	79;"	enumerator	enum:__anon25
+GPIO_Pin_5	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	80;"	enumerator	enum:__anon25
+GPIO_Pin_6	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	81;"	enumerator	enum:__anon25
+GPIO_Pin_7	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	82;"	enumerator	enum:__anon25
+GPIO_Pin_All	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	85;"	enumerator	enum:__anon25
+GPIO_Pin_HNib	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	84;"	enumerator	enum:__anon25
+GPIO_Pin_LNib	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	83;"	enumerator	enum:__anon25
+GPIO_Pin_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	86;"	typedef	typeref:enum:__anon25
 GPIO_ReadInputData	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	145;"	prototype	signature:(GPIO_TypeDef* GPIOx)
 GPIO_ReadInputData	stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c	206;"	function	signature:(GPIO_TypeDef* GPIOx)
 GPIO_ReadInputDataBit	stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h	147;"	prototype	signature:(GPIO_TypeDef* GPIOx, GPIO_Pin_TypeDef GPIO_Pin)
@@ -962,6 +969,8 @@ IDR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	247;"	member	struct:GPIO_struct
 IER	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1567;"	member	struct:TIM1_struct
 IER	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1803;"	member	struct:TIM_struct
 IER	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1984;"	member	struct:TIM4_struct
+INITF_TIMEOUT	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	32;"	macro	file:
+INIT_TIMEOUT	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	30;"	macro	file:
 INTERRUPT	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2800;"	macro
 INTERRUPT	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2802;"	macro
 INTERRUPT_HANDLER	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2778;"	macro
@@ -1084,7 +1093,7 @@ ITC_SPRX_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1220;"	macro
 ITC_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1215;"	typedef	typeref:struct:ITC_struct
 ITC_struct	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1204;"	struct
 ITR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1058;"	member	struct:I2C_struct
-ITStatus	stm8l15x_stdperiph_driver\inc\stm8l15x.h	211;"	typedef	typeref:enum:__anon2
+ITStatus	stm8l15x_stdperiph_driver\inc\stm8l15x.h	211;"	typedef	typeref:enum:__anon3
 IWDG	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2703;"	macro
 IWDG_BASE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2654;"	macro
 IWDG_PR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1242;"	macro
@@ -1094,26 +1103,26 @@ IWDG_struct	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1230;"	struct
 KR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1232;"	member	struct:IWDG_struct
 LCD	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2712;"	macro
 LCD_BASE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2673;"	macro
-LCD_Bias_1_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	60;"	enumerator	enum:__anon26
-LCD_Bias_1_3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	59;"	enumerator	enum:__anon26
-LCD_Bias_1_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	58;"	enumerator	enum:__anon26
-LCD_Bias_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	61;"	typedef	typeref:enum:__anon26
+LCD_Bias_1_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	60;"	enumerator	enum:__anon27
+LCD_Bias_1_3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	59;"	enumerator	enum:__anon27
+LCD_Bias_1_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	58;"	enumerator	enum:__anon27
+LCD_Bias_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	61;"	typedef	typeref:enum:__anon27
 LCD_BlinkConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	431;"	prototype	signature:(LCD_BlinkMode_TypeDef LCD_BlinkMode, LCD_BlinkFrequency_TypeDef LCD_BlinkFrequency)
 LCD_BlinkConfig	stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c	233;"	function	signature:(LCD_BlinkMode_TypeDef LCD_BlinkMode, LCD_BlinkFrequency_TypeDef LCD_BlinkFrequency)
-LCD_BlinkFrequency_Div1024	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	186;"	enumerator	enum:__anon34
-LCD_BlinkFrequency_Div128	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	183;"	enumerator	enum:__anon34
-LCD_BlinkFrequency_Div16	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	180;"	enumerator	enum:__anon34
-LCD_BlinkFrequency_Div256	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	184;"	enumerator	enum:__anon34
-LCD_BlinkFrequency_Div32	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	181;"	enumerator	enum:__anon34
-LCD_BlinkFrequency_Div512	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	185;"	enumerator	enum:__anon34
-LCD_BlinkFrequency_Div64	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	182;"	enumerator	enum:__anon34
-LCD_BlinkFrequency_Div8	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	179;"	enumerator	enum:__anon34
-LCD_BlinkFrequency_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	187;"	typedef	typeref:enum:__anon34
-LCD_BlinkMode_AllSEG_AllCOM	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	171;"	enumerator	enum:__anon33
-LCD_BlinkMode_Off	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	168;"	enumerator	enum:__anon33
-LCD_BlinkMode_SEG0_AllCOM	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	170;"	enumerator	enum:__anon33
-LCD_BlinkMode_SEG0_COM0	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	169;"	enumerator	enum:__anon33
-LCD_BlinkMode_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	172;"	typedef	typeref:enum:__anon33
+LCD_BlinkFrequency_Div1024	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	186;"	enumerator	enum:__anon35
+LCD_BlinkFrequency_Div128	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	183;"	enumerator	enum:__anon35
+LCD_BlinkFrequency_Div16	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	180;"	enumerator	enum:__anon35
+LCD_BlinkFrequency_Div256	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	184;"	enumerator	enum:__anon35
+LCD_BlinkFrequency_Div32	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	181;"	enumerator	enum:__anon35
+LCD_BlinkFrequency_Div512	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	185;"	enumerator	enum:__anon35
+LCD_BlinkFrequency_Div64	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	182;"	enumerator	enum:__anon35
+LCD_BlinkFrequency_Div8	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	179;"	enumerator	enum:__anon35
+LCD_BlinkFrequency_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	187;"	typedef	typeref:enum:__anon35
+LCD_BlinkMode_AllSEG_AllCOM	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	171;"	enumerator	enum:__anon34
+LCD_BlinkMode_Off	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	168;"	enumerator	enum:__anon34
+LCD_BlinkMode_SEG0_AllCOM	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	170;"	enumerator	enum:__anon34
+LCD_BlinkMode_SEG0_COM0	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	169;"	enumerator	enum:__anon34
+LCD_BlinkMode_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	172;"	typedef	typeref:enum:__anon34
 LCD_CR1_B2	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2555;"	macro
 LCD_CR1_BLINK	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2552;"	macro
 LCD_CR1_BLINKF	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2553;"	macro
@@ -1143,54 +1152,56 @@ LCD_Cmd	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	425;"	prototype	signature:(
 LCD_Cmd	stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c	132;"	function	signature:(FunctionalState NewState)
 LCD_ContrastConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	430;"	prototype	signature:(LCD_Contrast_TypeDef LCD_Contrast)
 LCD_ContrastConfig	stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c	254;"	function	signature:(LCD_Contrast_TypeDef LCD_Contrast)
-LCD_Contrast_2V6	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	114;"	enumerator	enum:__anon29
-LCD_Contrast_2V7	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	115;"	enumerator	enum:__anon29
-LCD_Contrast_2V8	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	116;"	enumerator	enum:__anon29
-LCD_Contrast_2V9	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	117;"	enumerator	enum:__anon29
-LCD_Contrast_3V0	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	118;"	enumerator	enum:__anon29
-LCD_Contrast_3V1	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	119;"	enumerator	enum:__anon29
-LCD_Contrast_3V2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	120;"	enumerator	enum:__anon29
-LCD_Contrast_3V3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	121;"	enumerator	enum:__anon29
-LCD_Contrast_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	122;"	typedef	typeref:enum:__anon29
+LCD_Contrast_2V6	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	114;"	enumerator	enum:__anon30
+LCD_Contrast_2V7	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	115;"	enumerator	enum:__anon30
+LCD_Contrast_2V8	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	116;"	enumerator	enum:__anon30
+LCD_Contrast_2V9	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	117;"	enumerator	enum:__anon30
+LCD_Contrast_3V0	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	118;"	enumerator	enum:__anon30
+LCD_Contrast_3V1	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	119;"	enumerator	enum:__anon30
+LCD_Contrast_3V2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	120;"	enumerator	enum:__anon30
+LCD_Contrast_3V3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	121;"	enumerator	enum:__anon30
+LCD_Contrast_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	122;"	typedef	typeref:enum:__anon30
 LCD_DeInit	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	419;"	prototype	signature:(void)
 LCD_DeInit	stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c	45;"	function	signature:(void)
 LCD_DeadTimeConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	429;"	prototype	signature:(LCD_DeadTime_TypeDef LCD_DeadTime)
 LCD_DeadTimeConfig	stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c	212;"	function	signature:(LCD_DeadTime_TypeDef LCD_DeadTime)
-LCD_DeadTime_0	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	153;"	enumerator	enum:__anon32
-LCD_DeadTime_1	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	154;"	enumerator	enum:__anon32
-LCD_DeadTime_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	155;"	enumerator	enum:__anon32
-LCD_DeadTime_3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	156;"	enumerator	enum:__anon32
-LCD_DeadTime_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	157;"	enumerator	enum:__anon32
-LCD_DeadTime_5	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	158;"	enumerator	enum:__anon32
-LCD_DeadTime_6	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	159;"	enumerator	enum:__anon32
-LCD_DeadTime_7	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	160;"	enumerator	enum:__anon32
-LCD_DeadTime_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	161;"	typedef	typeref:enum:__anon32
-LCD_Divider_16	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	91;"	enumerator	enum:__anon28
-LCD_Divider_17	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	92;"	enumerator	enum:__anon28
-LCD_Divider_18	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	93;"	enumerator	enum:__anon28
-LCD_Divider_19	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	94;"	enumerator	enum:__anon28
-LCD_Divider_20	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	95;"	enumerator	enum:__anon28
-LCD_Divider_21	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	96;"	enumerator	enum:__anon28
-LCD_Divider_22	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	97;"	enumerator	enum:__anon28
-LCD_Divider_23	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	98;"	enumerator	enum:__anon28
-LCD_Divider_24	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	99;"	enumerator	enum:__anon28
-LCD_Divider_25	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	100;"	enumerator	enum:__anon28
-LCD_Divider_26	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	101;"	enumerator	enum:__anon28
-LCD_Divider_27	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	102;"	enumerator	enum:__anon28
-LCD_Divider_28	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	103;"	enumerator	enum:__anon28
-LCD_Divider_29	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	104;"	enumerator	enum:__anon28
-LCD_Divider_30	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	105;"	enumerator	enum:__anon28
-LCD_Divider_31	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	106;"	enumerator	enum:__anon28
-LCD_Divider_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	107;"	typedef	typeref:enum:__anon28
-LCD_Duty_1_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	47;"	enumerator	enum:__anon25
-LCD_Duty_1_3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	48;"	enumerator	enum:__anon25
-LCD_Duty_1_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	49;"	enumerator	enum:__anon25
-LCD_Duty_1_8	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	50;"	enumerator	enum:__anon25
-LCD_Duty_Static	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	46;"	enumerator	enum:__anon25
-LCD_Duty_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	51;"	typedef	typeref:enum:__anon25
+LCD_DeadTime_0	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	153;"	enumerator	enum:__anon33
+LCD_DeadTime_1	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	154;"	enumerator	enum:__anon33
+LCD_DeadTime_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	155;"	enumerator	enum:__anon33
+LCD_DeadTime_3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	156;"	enumerator	enum:__anon33
+LCD_DeadTime_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	157;"	enumerator	enum:__anon33
+LCD_DeadTime_5	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	158;"	enumerator	enum:__anon33
+LCD_DeadTime_6	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	159;"	enumerator	enum:__anon33
+LCD_DeadTime_7	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	160;"	enumerator	enum:__anon33
+LCD_DeadTime_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	161;"	typedef	typeref:enum:__anon33
+LCD_Divider_16	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	91;"	enumerator	enum:__anon29
+LCD_Divider_17	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	92;"	enumerator	enum:__anon29
+LCD_Divider_18	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	93;"	enumerator	enum:__anon29
+LCD_Divider_19	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	94;"	enumerator	enum:__anon29
+LCD_Divider_20	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	95;"	enumerator	enum:__anon29
+LCD_Divider_21	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	96;"	enumerator	enum:__anon29
+LCD_Divider_22	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	97;"	enumerator	enum:__anon29
+LCD_Divider_23	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	98;"	enumerator	enum:__anon29
+LCD_Divider_24	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	99;"	enumerator	enum:__anon29
+LCD_Divider_25	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	100;"	enumerator	enum:__anon29
+LCD_Divider_26	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	101;"	enumerator	enum:__anon29
+LCD_Divider_27	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	102;"	enumerator	enum:__anon29
+LCD_Divider_28	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	103;"	enumerator	enum:__anon29
+LCD_Divider_29	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	104;"	enumerator	enum:__anon29
+LCD_Divider_30	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	105;"	enumerator	enum:__anon29
+LCD_Divider_31	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	106;"	enumerator	enum:__anon29
+LCD_Divider_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	107;"	typedef	typeref:enum:__anon29
+LCD_Duty_1_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	47;"	enumerator	enum:__anon26
+LCD_Duty_1_3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	48;"	enumerator	enum:__anon26
+LCD_Duty_1_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	49;"	enumerator	enum:__anon26
+LCD_Duty_1_8	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	50;"	enumerator	enum:__anon26
+LCD_Duty_Static	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	46;"	enumerator	enum:__anon26
+LCD_Duty_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	51;"	typedef	typeref:enum:__anon26
 LCD_FRQ_DIV	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2569;"	macro
 LCD_FRQ_PS	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2570;"	macro
 LCD_FRQ_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2539;"	macro
+LCD_Flag_Colon	lcd.h	3;"	enumerator	enum:__anon1
+LCD_Flag_Point	lcd.h	4;"	enumerator	enum:__anon1
 LCD_GetFlagStatus	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	436;"	prototype	signature:(void)
 LCD_GetFlagStatus	stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c	321;"	function	signature:(void)
 LCD_GetITStatus	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	438;"	prototype	signature:(void)
@@ -1204,74 +1215,74 @@ LCD_Init	stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c	77;"	function	signature:(L
 LCD_PM_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2540;"	macro
 LCD_PageSelect	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	435;"	prototype	signature:(LCD_PageSelection_TypeDef LCD_PageSelection)
 LCD_PageSelect	stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c	307;"	function	signature:(LCD_PageSelection_TypeDef LCD_PageSelection)
-LCD_PageSelection_FirstPage	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	233;"	enumerator	enum:__anon37
-LCD_PageSelection_SecondPage	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	234;"	enumerator	enum:__anon37
-LCD_PageSelection_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	235;"	typedef	typeref:enum:__anon37
+LCD_PageSelection_FirstPage	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	233;"	enumerator	enum:__anon38
+LCD_PageSelection_SecondPage	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	234;"	enumerator	enum:__anon38
+LCD_PageSelection_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	235;"	typedef	typeref:enum:__anon38
 LCD_PortMaskConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	433;"	prototype	signature:(LCD_PortMaskRegister_TypeDef LCD_PortMaskRegister, uint8_t LCD_Mask)
 LCD_PortMaskConfig	stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c	272;"	function	signature:(LCD_PortMaskRegister_TypeDef LCD_PortMaskRegister, uint8_t LCD_Mask)
-LCD_PortMaskRegister_0	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	221;"	enumerator	enum:__anon36
-LCD_PortMaskRegister_1	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	222;"	enumerator	enum:__anon36
-LCD_PortMaskRegister_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	223;"	enumerator	enum:__anon36
-LCD_PortMaskRegister_3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	224;"	enumerator	enum:__anon36
-LCD_PortMaskRegister_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	225;"	enumerator	enum:__anon36
-LCD_PortMaskRegister_5	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	226;"	enumerator	enum:__anon36
-LCD_PortMaskRegister_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	227;"	typedef	typeref:enum:__anon36
-LCD_Prescaler_1	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	68;"	enumerator	enum:__anon27
-LCD_Prescaler_1024	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	78;"	enumerator	enum:__anon27
-LCD_Prescaler_128	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	75;"	enumerator	enum:__anon27
-LCD_Prescaler_16	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	72;"	enumerator	enum:__anon27
-LCD_Prescaler_16384	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	82;"	enumerator	enum:__anon27
-LCD_Prescaler_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	69;"	enumerator	enum:__anon27
-LCD_Prescaler_2048	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	79;"	enumerator	enum:__anon27
-LCD_Prescaler_256	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	76;"	enumerator	enum:__anon27
-LCD_Prescaler_32	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	73;"	enumerator	enum:__anon27
-LCD_Prescaler_32768	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	83;"	enumerator	enum:__anon27
-LCD_Prescaler_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	70;"	enumerator	enum:__anon27
-LCD_Prescaler_4096	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	80;"	enumerator	enum:__anon27
-LCD_Prescaler_512	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	77;"	enumerator	enum:__anon27
-LCD_Prescaler_64	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	74;"	enumerator	enum:__anon27
-LCD_Prescaler_8	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	71;"	enumerator	enum:__anon27
-LCD_Prescaler_8192	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	81;"	enumerator	enum:__anon27
-LCD_Prescaler_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	84;"	typedef	typeref:enum:__anon27
+LCD_PortMaskRegister_0	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	221;"	enumerator	enum:__anon37
+LCD_PortMaskRegister_1	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	222;"	enumerator	enum:__anon37
+LCD_PortMaskRegister_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	223;"	enumerator	enum:__anon37
+LCD_PortMaskRegister_3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	224;"	enumerator	enum:__anon37
+LCD_PortMaskRegister_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	225;"	enumerator	enum:__anon37
+LCD_PortMaskRegister_5	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	226;"	enumerator	enum:__anon37
+LCD_PortMaskRegister_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	227;"	typedef	typeref:enum:__anon37
+LCD_Prescaler_1	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	68;"	enumerator	enum:__anon28
+LCD_Prescaler_1024	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	78;"	enumerator	enum:__anon28
+LCD_Prescaler_128	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	75;"	enumerator	enum:__anon28
+LCD_Prescaler_16	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	72;"	enumerator	enum:__anon28
+LCD_Prescaler_16384	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	82;"	enumerator	enum:__anon28
+LCD_Prescaler_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	69;"	enumerator	enum:__anon28
+LCD_Prescaler_2048	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	79;"	enumerator	enum:__anon28
+LCD_Prescaler_256	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	76;"	enumerator	enum:__anon28
+LCD_Prescaler_32	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	73;"	enumerator	enum:__anon28
+LCD_Prescaler_32768	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	83;"	enumerator	enum:__anon28
+LCD_Prescaler_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	70;"	enumerator	enum:__anon28
+LCD_Prescaler_4096	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	80;"	enumerator	enum:__anon28
+LCD_Prescaler_512	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	77;"	enumerator	enum:__anon28
+LCD_Prescaler_64	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	74;"	enumerator	enum:__anon28
+LCD_Prescaler_8	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	71;"	enumerator	enum:__anon28
+LCD_Prescaler_8192	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	81;"	enumerator	enum:__anon28
+LCD_Prescaler_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	84;"	typedef	typeref:enum:__anon28
 LCD_PulseOnDurationConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	428;"	prototype	signature:(LCD_PulseOnDuration_TypeDef LCD_PulseOnDuration)
 LCD_PulseOnDurationConfig	stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c	197;"	function	signature:(LCD_PulseOnDuration_TypeDef LCD_PulseOnDuration)
-LCD_PulseOnDuration_0	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	138;"	enumerator	enum:__anon31
-LCD_PulseOnDuration_1	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	139;"	enumerator	enum:__anon31
-LCD_PulseOnDuration_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	140;"	enumerator	enum:__anon31
-LCD_PulseOnDuration_3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	141;"	enumerator	enum:__anon31
-LCD_PulseOnDuration_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	142;"	enumerator	enum:__anon31
-LCD_PulseOnDuration_5	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	143;"	enumerator	enum:__anon31
-LCD_PulseOnDuration_6	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	144;"	enumerator	enum:__anon31
-LCD_PulseOnDuration_7	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	145;"	enumerator	enum:__anon31
-LCD_PulseOnDuration_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	146;"	typedef	typeref:enum:__anon31
-LCD_RAMRegister_0	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	193;"	enumerator	enum:__anon35
-LCD_RAMRegister_1	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	194;"	enumerator	enum:__anon35
-LCD_RAMRegister_10	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	203;"	enumerator	enum:__anon35
-LCD_RAMRegister_11	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	204;"	enumerator	enum:__anon35
-LCD_RAMRegister_12	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	205;"	enumerator	enum:__anon35
-LCD_RAMRegister_13	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	206;"	enumerator	enum:__anon35
-LCD_RAMRegister_14	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	207;"	enumerator	enum:__anon35
-LCD_RAMRegister_15	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	208;"	enumerator	enum:__anon35
-LCD_RAMRegister_16	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	209;"	enumerator	enum:__anon35
-LCD_RAMRegister_17	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	210;"	enumerator	enum:__anon35
-LCD_RAMRegister_18	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	211;"	enumerator	enum:__anon35
-LCD_RAMRegister_19	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	212;"	enumerator	enum:__anon35
-LCD_RAMRegister_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	195;"	enumerator	enum:__anon35
-LCD_RAMRegister_20	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	213;"	enumerator	enum:__anon35
-LCD_RAMRegister_21	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	214;"	enumerator	enum:__anon35
-LCD_RAMRegister_3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	196;"	enumerator	enum:__anon35
-LCD_RAMRegister_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	197;"	enumerator	enum:__anon35
-LCD_RAMRegister_5	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	198;"	enumerator	enum:__anon35
-LCD_RAMRegister_6	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	199;"	enumerator	enum:__anon35
-LCD_RAMRegister_7	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	200;"	enumerator	enum:__anon35
-LCD_RAMRegister_8	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	201;"	enumerator	enum:__anon35
-LCD_RAMRegister_9	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	202;"	enumerator	enum:__anon35
-LCD_RAMRegister_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	215;"	typedef	typeref:enum:__anon35
+LCD_PulseOnDuration_0	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	138;"	enumerator	enum:__anon32
+LCD_PulseOnDuration_1	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	139;"	enumerator	enum:__anon32
+LCD_PulseOnDuration_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	140;"	enumerator	enum:__anon32
+LCD_PulseOnDuration_3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	141;"	enumerator	enum:__anon32
+LCD_PulseOnDuration_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	142;"	enumerator	enum:__anon32
+LCD_PulseOnDuration_5	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	143;"	enumerator	enum:__anon32
+LCD_PulseOnDuration_6	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	144;"	enumerator	enum:__anon32
+LCD_PulseOnDuration_7	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	145;"	enumerator	enum:__anon32
+LCD_PulseOnDuration_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	146;"	typedef	typeref:enum:__anon32
+LCD_RAMRegister_0	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	193;"	enumerator	enum:__anon36
+LCD_RAMRegister_1	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	194;"	enumerator	enum:__anon36
+LCD_RAMRegister_10	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	203;"	enumerator	enum:__anon36
+LCD_RAMRegister_11	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	204;"	enumerator	enum:__anon36
+LCD_RAMRegister_12	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	205;"	enumerator	enum:__anon36
+LCD_RAMRegister_13	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	206;"	enumerator	enum:__anon36
+LCD_RAMRegister_14	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	207;"	enumerator	enum:__anon36
+LCD_RAMRegister_15	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	208;"	enumerator	enum:__anon36
+LCD_RAMRegister_16	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	209;"	enumerator	enum:__anon36
+LCD_RAMRegister_17	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	210;"	enumerator	enum:__anon36
+LCD_RAMRegister_18	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	211;"	enumerator	enum:__anon36
+LCD_RAMRegister_19	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	212;"	enumerator	enum:__anon36
+LCD_RAMRegister_2	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	195;"	enumerator	enum:__anon36
+LCD_RAMRegister_20	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	213;"	enumerator	enum:__anon36
+LCD_RAMRegister_21	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	214;"	enumerator	enum:__anon36
+LCD_RAMRegister_3	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	196;"	enumerator	enum:__anon36
+LCD_RAMRegister_4	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	197;"	enumerator	enum:__anon36
+LCD_RAMRegister_5	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	198;"	enumerator	enum:__anon36
+LCD_RAMRegister_6	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	199;"	enumerator	enum:__anon36
+LCD_RAMRegister_7	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	200;"	enumerator	enum:__anon36
+LCD_RAMRegister_8	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	201;"	enumerator	enum:__anon36
+LCD_RAMRegister_9	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	202;"	enumerator	enum:__anon36
+LCD_RAMRegister_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	215;"	typedef	typeref:enum:__anon36
 LCD_RAM_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2541;"	macro
 LCD_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2532;"	typedef	typeref:struct:LCD_struct
-LCD_VoltageSource_External	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	130;"	enumerator	enum:__anon30
-LCD_VoltageSource_Internal	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	129;"	enumerator	enum:__anon30
-LCD_VoltageSource_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	131;"	typedef	typeref:enum:__anon30
+LCD_VoltageSource_External	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	130;"	enumerator	enum:__anon31
+LCD_VoltageSource_Internal	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	129;"	enumerator	enum:__anon31
+LCD_VoltageSource_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	131;"	typedef	typeref:enum:__anon31
 LCD_WriteRAM	stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h	434;"	prototype	signature:(LCD_RAMRegister_TypeDef LCD_RAMRegister, uint8_t LCD_Data)
 LCD_WriteRAM	stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c	290;"	function	signature:(LCD_RAMRegister_TypeDef LCD_RAMRegister, uint8_t LCD_Data)
 LCD_struct	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2520;"	struct
@@ -1286,6 +1297,7 @@ NEAR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	104;"	macro
 NEAR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	111;"	macro
 NEAR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	125;"	macro
 NOT_CORRECT_TAMPER	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	646;"	macro
+NumberMap	lcd.c	48;"	variable
 OAR2	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1053;"	member	struct:I2C_struct
 OARH	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1052;"	member	struct:I2C_struct
 OARL	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1051;"	member	struct:I2C_struct
@@ -1328,6 +1340,7 @@ PointerAttr	stm8l15x_stdperiph_driver\inc\stm8l15x.h	137;"	macro
 RAM	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2528;"	member	struct:LCD_struct
 RCR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1447;"	member	struct:RI_struct
 RCR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1583;"	member	struct:TIM1_struct
+RECALPF_TIMEOUT	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	35;"	macro	file:
 REGCSR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	715;"	member	struct:CLK_struct
 RESERVED	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1432;"	member	struct:RI_struct
 RESERVED	stm8l15x_stdperiph_driver\inc\stm8l15x.h	912;"	member	struct:EXTI_struct
@@ -1357,7 +1370,7 @@ RESERVED7	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2295;"	member	struct:DAC_stru
 RESERVED7	stm8l15x_stdperiph_driver\inc\stm8l15x.h	319;"	member	struct:RTC_struct
 RESERVED8	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2298;"	member	struct:DAC_struct
 RESERVED8	stm8l15x_stdperiph_driver\inc\stm8l15x.h	325;"	member	struct:RTC_struct
-RESET	stm8l15x_stdperiph_driver\inc\stm8l15x.h	211;"	enumerator	enum:__anon2
+RESET	stm8l15x_stdperiph_driver\inc\stm8l15x.h	211;"	enumerator	enum:__anon3
 RI	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2727;"	macro
 RI_ASCR1_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1463;"	macro
 RI_ASCR2_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1464;"	macro
@@ -1382,6 +1395,7 @@ RMPCR2	stm8l15x_stdperiph_driver\inc\stm8l15x.h	645;"	member	struct:SYSCFG_struc
 RMPCR3	stm8l15x_stdperiph_driver\inc\stm8l15x.h	643;"	member	struct:SYSCFG_struct
 ROP	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1325;"	member	struct:OPT_struct
 RSERVED1	stm8l15x_stdperiph_driver\inc\stm8l15x.h	573;"	member	struct:BEEP_struct
+RSF_TIMEOUT	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	31;"	macro	file:
 RST	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2698;"	macro
 RST_BASE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2650;"	macro
 RST_CR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1362;"	macro
@@ -1421,43 +1435,47 @@ RTC_ALRMASSRL_ALSS	stm8l15x_stdperiph_driver\inc\stm8l15x.h	492;"	macro
 RTC_ALRMASSRL_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	371;"	macro
 RTC_APRER_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	355;"	macro
 RTC_AlarmCmd	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	752;"	prototype	signature:(FunctionalState NewState)
-RTC_AlarmDateWeekDay	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	465;"	member	struct:__anon66
-RTC_AlarmDateWeekDaySel	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	463;"	member	struct:__anon66
-RTC_AlarmDateWeekDaySel_Date	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	103;"	enumerator	enum:__anon42
-RTC_AlarmDateWeekDaySel_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	106;"	typedef	typeref:enum:__anon42
-RTC_AlarmDateWeekDaySel_WeekDay	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	104;"	enumerator	enum:__anon42
-RTC_AlarmMask	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	461;"	member	struct:__anon66
-RTC_AlarmMask_All	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	117;"	enumerator	enum:__anon43
-RTC_AlarmMask_DateWeekDay	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	116;"	enumerator	enum:__anon43
-RTC_AlarmMask_Hours	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	115;"	enumerator	enum:__anon43
-RTC_AlarmMask_Minutes	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	114;"	enumerator	enum:__anon43
-RTC_AlarmMask_None	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	112;"	enumerator	enum:__anon43
-RTC_AlarmMask_Seconds	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	113;"	enumerator	enum:__anon43
-RTC_AlarmMask_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	119;"	typedef	typeref:enum:__anon43
+RTC_AlarmCmd	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1082;"	function	signature:(FunctionalState NewState)
+RTC_AlarmDateWeekDay	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	465;"	member	struct:__anon67
+RTC_AlarmDateWeekDaySel	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	463;"	member	struct:__anon67
+RTC_AlarmDateWeekDaySel_Date	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	103;"	enumerator	enum:__anon43
+RTC_AlarmDateWeekDaySel_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	106;"	typedef	typeref:enum:__anon43
+RTC_AlarmDateWeekDaySel_WeekDay	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	104;"	enumerator	enum:__anon43
+RTC_AlarmMask	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	461;"	member	struct:__anon67
+RTC_AlarmMask_All	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	117;"	enumerator	enum:__anon44
+RTC_AlarmMask_DateWeekDay	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	116;"	enumerator	enum:__anon44
+RTC_AlarmMask_Hours	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	115;"	enumerator	enum:__anon44
+RTC_AlarmMask_Minutes	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	114;"	enumerator	enum:__anon44
+RTC_AlarmMask_None	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	112;"	enumerator	enum:__anon44
+RTC_AlarmMask_Seconds	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	113;"	enumerator	enum:__anon44
+RTC_AlarmMask_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	119;"	typedef	typeref:enum:__anon44
 RTC_AlarmStructInit	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	749;"	prototype	signature:(RTC_AlarmTypeDef* RTC_AlarmStruct)
+RTC_AlarmStructInit	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	288;"	function	signature:(RTC_AlarmTypeDef* RTC_AlarmStruct)
 RTC_AlarmSubSecondConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	753;"	prototype	signature:(uint16_t RTC_AlarmSubSecondValue, RTC_AlarmSubSecondMask_TypeDef RTC_AlarmSubSecondMask)
-RTC_AlarmSubSecondMask_All	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	126;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_None	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	141;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	140;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_1	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	127;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_10	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	136;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_11	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	137;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_12	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	138;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_13	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	139;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_2	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	128;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_3	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	129;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_4	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	130;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_5	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	131;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_6	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	132;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_7	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	133;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_8	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	134;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_SS14_9	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	135;"	enumerator	enum:__anon44
-RTC_AlarmSubSecondMask_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	143;"	typedef	typeref:enum:__anon44
-RTC_AlarmTime	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	459;"	member	struct:__anon66
-RTC_AlarmTypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	473;"	typedef	typeref:struct:__anon66
-RTC_AsynchPrediv	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	391;"	member	struct:__anon63
+RTC_AlarmSubSecondConfig	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	851;"	function	signature:(uint16_t RTC_AlarmSubSecondValue, RTC_AlarmSubSecondMask_TypeDef RTC_AlarmSubSecondMask)
+RTC_AlarmSubSecondMask_All	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	126;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_None	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	141;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	140;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_1	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	127;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_10	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	136;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_11	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	137;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_12	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	138;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_13	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	139;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_2	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	128;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_3	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	129;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_4	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	130;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_5	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	131;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_6	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	132;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_7	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	133;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_8	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	134;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_SS14_9	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	135;"	enumerator	enum:__anon45
+RTC_AlarmSubSecondMask_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	143;"	typedef	typeref:enum:__anon45
+RTC_AlarmTime	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	459;"	member	struct:__anon67
+RTC_AlarmTypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	473;"	typedef	typeref:struct:__anon67
+RTC_AsynchPrediv	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	391;"	member	struct:__anon64
 RTC_BASE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2656;"	macro
 RTC_BypassShadowCmd	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	737;"	prototype	signature:(FunctionalState NewState)
+RTC_BypassShadowCmd	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	454;"	function	signature:(FunctionalState NewState)
 RTC_CALRH_CALM	stm8l15x_stdperiph_driver\inc\stm8l15x.h	503;"	macro
 RTC_CALRH_CALP	stm8l15x_stdperiph_driver\inc\stm8l15x.h	499;"	macro
 RTC_CALRH_CALW16	stm8l15x_stdperiph_driver\inc\stm8l15x.h	501;"	macro
@@ -1486,12 +1504,16 @@ RTC_CR3_POL	stm8l15x_stdperiph_driver\inc\stm8l15x.h	433;"	macro
 RTC_CR3_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	348;"	macro
 RTC_CR3_SUB1H	stm8l15x_stdperiph_driver\inc\stm8l15x.h	436;"	macro
 RTC_CalibOutputCmd	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	773;"	prototype	signature:(FunctionalState NewState)
+RTC_CalibOutputCmd	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1623;"	function	signature:(FunctionalState NewState)
 RTC_CalibOutputConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	772;"	prototype	signature:(RTC_CalibOutput_TypeDef RTC_CalibOutput)
-RTC_CalibOutput_1Hz	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	185;"	enumerator	enum:__anon48
-RTC_CalibOutput_512Hz	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	184;"	enumerator	enum:__anon48
-RTC_CalibOutput_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	187;"	typedef	typeref:enum:__anon48
+RTC_CalibOutputConfig	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1594;"	function	signature:(RTC_CalibOutput_TypeDef RTC_CalibOutput)
+RTC_CalibOutput_1Hz	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	185;"	enumerator	enum:__anon49
+RTC_CalibOutput_512Hz	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	184;"	enumerator	enum:__anon49
+RTC_CalibOutput_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	187;"	typedef	typeref:enum:__anon49
 RTC_ClearFlag	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	786;"	prototype	signature:(RTC_Flag_TypeDef RTC_FLAG)
+RTC_ClearFlag	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1684;"	function	signature:(RTC_Flag_TypeDef RTC_FLAG)
 RTC_ClearITPendingBit	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	788;"	prototype	signature:(RTC_IT_TypeDef RTC_IT)
+RTC_ClearITPendingBit	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1734;"	function	signature:(RTC_IT_TypeDef RTC_IT)
 RTC_DR1_DT	stm8l15x_stdperiph_driver\inc\stm8l15x.h	402;"	macro
 RTC_DR1_DU	stm8l15x_stdperiph_driver\inc\stm8l15x.h	403;"	macro
 RTC_DR1_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	342;"	macro
@@ -1502,50 +1524,63 @@ RTC_DR2_WDU	stm8l15x_stdperiph_driver\inc\stm8l15x.h	406;"	macro
 RTC_DR3_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	344;"	macro
 RTC_DR3_YT	stm8l15x_stdperiph_driver\inc\stm8l15x.h	411;"	macro
 RTC_DR3_YU	stm8l15x_stdperiph_driver\inc\stm8l15x.h	412;"	macro
-RTC_Date	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	439;"	member	struct:__anon65
+RTC_Date	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	439;"	member	struct:__anon66
 RTC_DateStructInit	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	741;"	prototype	signature:(RTC_DateTypeDef* RTC_DateStruct)
-RTC_DateTypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	451;"	typedef	typeref:struct:__anon65
+RTC_DateStructInit	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	272;"	function	signature:(RTC_DateTypeDef* RTC_DateStruct)
+RTC_DateTypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	451;"	typedef	typeref:struct:__anon66
 RTC_DayLightSavingConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	762;"	prototype	signature:(RTC_DayLightSaving_TypeDef RTC_DayLightSaving, RTC_StoreOperation_TypeDef RTC_StoreOperation)
-RTC_DayLightSaving_ADD1H	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	194;"	enumerator	enum:__anon49
-RTC_DayLightSaving_SUB1H	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	193;"	enumerator	enum:__anon49
-RTC_DayLightSaving_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	196;"	typedef	typeref:enum:__anon49
+RTC_DayLightSavingConfig	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1290;"	function	signature:(RTC_DayLightSaving_TypeDef RTC_DayLightSaving, RTC_StoreOperation_TypeDef RTC_StoreOperation)
+RTC_DayLightSaving_ADD1H	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	194;"	enumerator	enum:__anon50
+RTC_DayLightSaving_SUB1H	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	193;"	enumerator	enum:__anon50
+RTC_DayLightSaving_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	196;"	typedef	typeref:enum:__anon50
 RTC_DeInit	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	728;"	prototype	signature:(void)
+RTC_DeInit	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	67;"	function	signature:(void)
 RTC_EnterInitMode	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	732;"	prototype	signature:(void)
+RTC_EnterInitMode	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	347;"	function	signature:(void)
 RTC_ExitInitMode	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	733;"	prototype	signature:(void)
-RTC_FLAG_ALRAF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	226;"	enumerator	enum:__anon52
-RTC_FLAG_ALRAWF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	240;"	enumerator	enum:__anon52
+RTC_ExitInitMode	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	382;"	function	signature:(void)
+RTC_FLAG_ALRAF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	226;"	enumerator	enum:__anon53
+RTC_FLAG_ALRAWF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	240;"	enumerator	enum:__anon53
 RTC_FLAG_CLRBLE	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	616;"	macro
-RTC_FLAG_INITF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	228;"	enumerator	enum:__anon52
-RTC_FLAG_INITS	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	230;"	enumerator	enum:__anon52
-RTC_FLAG_RECALPF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	237;"	enumerator	enum:__anon52
-RTC_FLAG_RSF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	229;"	enumerator	enum:__anon52
-RTC_FLAG_SHPF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	232;"	enumerator	enum:__anon52
-RTC_FLAG_TAMP1F	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	223;"	enumerator	enum:__anon52
-RTC_FLAG_TAMP2F	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	222;"	enumerator	enum:__anon52
-RTC_FLAG_TAMP3F	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	221;"	enumerator	enum:__anon52
-RTC_FLAG_WUTF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	225;"	enumerator	enum:__anon52
-RTC_FLAG_WUTWF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	236;"	enumerator	enum:__anon52
-RTC_Flag_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	242;"	typedef	typeref:enum:__anon52
-RTC_Format_BCD	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	213;"	enumerator	enum:__anon51
-RTC_Format_BIN	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	212;"	enumerator	enum:__anon51
-RTC_Format_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	215;"	typedef	typeref:enum:__anon51
+RTC_FLAG_INITF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	228;"	enumerator	enum:__anon53
+RTC_FLAG_INITS	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	230;"	enumerator	enum:__anon53
+RTC_FLAG_RECALPF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	237;"	enumerator	enum:__anon53
+RTC_FLAG_RSF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	229;"	enumerator	enum:__anon53
+RTC_FLAG_SHPF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	232;"	enumerator	enum:__anon53
+RTC_FLAG_TAMP1F	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	223;"	enumerator	enum:__anon53
+RTC_FLAG_TAMP2F	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	222;"	enumerator	enum:__anon53
+RTC_FLAG_TAMP3F	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	221;"	enumerator	enum:__anon53
+RTC_FLAG_WUTF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	225;"	enumerator	enum:__anon53
+RTC_FLAG_WUTWF	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	236;"	enumerator	enum:__anon53
+RTC_Flag_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	242;"	typedef	typeref:enum:__anon53
+RTC_Format_BCD	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	213;"	enumerator	enum:__anon52
+RTC_Format_BIN	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	212;"	enumerator	enum:__anon52
+RTC_Format_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	215;"	typedef	typeref:enum:__anon52
 RTC_GetAlarm	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	751;"	prototype	signature:(RTC_Format_TypeDef RTC_Format, RTC_AlarmTypeDef* RTC_AlarmStruct)
+RTC_GetAlarm	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1028;"	function	signature:(RTC_Format_TypeDef RTC_Format, RTC_AlarmTypeDef* RTC_AlarmStruct)
 RTC_GetDate	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	745;"	prototype	signature:(RTC_Format_TypeDef RTC_Format, RTC_DateTypeDef* RTC_DateStruct)
+RTC_GetDate	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	811;"	function	signature:(RTC_Format_TypeDef RTC_Format, RTC_DateTypeDef* RTC_DateStruct)
 RTC_GetFlagStatus	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	785;"	prototype	signature:(RTC_Flag_TypeDef RTC_FLAG)
+RTC_GetFlagStatus	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1652;"	function	signature:(RTC_Flag_TypeDef RTC_FLAG)
 RTC_GetITStatus	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	787;"	prototype	signature:(RTC_IT_TypeDef RTC_IT)
+RTC_GetITStatus	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1700;"	function	signature:(RTC_IT_TypeDef RTC_IT)
 RTC_GetStoreOperation	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	764;"	prototype	signature:(void)
+RTC_GetStoreOperation	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1316;"	function	signature:(void)
 RTC_GetSubSecond	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	746;"	prototype	signature:(void)
+RTC_GetSubSecond	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	685;"	function	signature:(void)
 RTC_GetTime	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	744;"	prototype	signature:(RTC_Format_TypeDef RTC_Format, RTC_TimeTypeDef* RTC_TimeStruct)
+RTC_GetTime	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	635;"	function	signature:(RTC_Format_TypeDef RTC_Format, RTC_TimeTypeDef* RTC_TimeStruct)
 RTC_GetWakeUpCounter	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	758;"	prototype	signature:(void)
-RTC_H12	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	426;"	member	struct:__anon64
-RTC_H12_AM	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	92;"	enumerator	enum:__anon41
-RTC_H12_PM	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	93;"	enumerator	enum:__anon41
-RTC_H12_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	95;"	typedef	typeref:enum:__anon41
-RTC_HourFormat	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	389;"	member	struct:__anon63
-RTC_HourFormat_12	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	82;"	enumerator	enum:__anon40
-RTC_HourFormat_24	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	81;"	enumerator	enum:__anon40
-RTC_HourFormat_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	84;"	typedef	typeref:enum:__anon40
-RTC_Hours	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	405;"	member	struct:__anon64
+RTC_GetWakeUpCounter	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1187;"	function	signature:(void)
+RTC_H12	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	426;"	member	struct:__anon65
+RTC_H12_AM	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	92;"	enumerator	enum:__anon42
+RTC_H12_PM	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	93;"	enumerator	enum:__anon42
+RTC_H12_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	95;"	typedef	typeref:enum:__anon42
+RTC_HourFormat	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	389;"	member	struct:__anon64
+RTC_HourFormat_12	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	82;"	enumerator	enum:__anon41
+RTC_HourFormat_24	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	81;"	enumerator	enum:__anon41
+RTC_HourFormat_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	84;"	typedef	typeref:enum:__anon41
+RTC_Hours	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	405;"	member	struct:__anon65
 RTC_ISR1_ALRAWF	stm8l15x_stdperiph_driver\inc\stm8l15x.h	448;"	macro
 RTC_ISR1_INIT	stm8l15x_stdperiph_driver\inc\stm8l15x.h	441;"	macro
 RTC_ISR1_INITF	stm8l15x_stdperiph_driver\inc\stm8l15x.h	442;"	macro
@@ -1562,36 +1597,40 @@ RTC_ISR2_TAMP2F	stm8l15x_stdperiph_driver\inc\stm8l15x.h	455;"	macro
 RTC_ISR2_TAMP3F	stm8l15x_stdperiph_driver\inc\stm8l15x.h	454;"	macro
 RTC_ISR2_WUTF	stm8l15x_stdperiph_driver\inc\stm8l15x.h	452;"	macro
 RTC_ITConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	731;"	prototype	signature:(RTC_IT_TypeDef RTC_IT, FunctionalState NewState)
-RTC_IT_ALRA	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	250;"	enumerator	enum:__anon53
-RTC_IT_TAMP	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	251;"	enumerator	enum:__anon53
-RTC_IT_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	253;"	typedef	typeref:enum:__anon53
-RTC_IT_WUT	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	249;"	enumerator	enum:__anon53
+RTC_ITConfig	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	314;"	function	signature:(RTC_IT_TypeDef RTC_IT, FunctionalState NewState)
+RTC_IT_ALRA	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	250;"	enumerator	enum:__anon54
+RTC_IT_TAMP	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	251;"	enumerator	enum:__anon54
+RTC_IT_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	253;"	typedef	typeref:enum:__anon54
+RTC_IT_WUT	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	249;"	enumerator	enum:__anon54
 RTC_Init	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	729;"	prototype	signature:(RTC_InitTypeDef* RTC_InitStruct)
-RTC_InitTypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	397;"	typedef	typeref:struct:__anon63
-RTC_Minutes	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	416;"	member	struct:__anon64
-RTC_Month	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	437;"	member	struct:__anon65
-RTC_Month_April	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	64;"	enumerator	enum:__anon39
-RTC_Month_August	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	68;"	enumerator	enum:__anon39
-RTC_Month_December	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	72;"	enumerator	enum:__anon39
-RTC_Month_February	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	62;"	enumerator	enum:__anon39
-RTC_Month_January	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	61;"	enumerator	enum:__anon39
-RTC_Month_July	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	67;"	enumerator	enum:__anon39
-RTC_Month_June	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	66;"	enumerator	enum:__anon39
-RTC_Month_March	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	63;"	enumerator	enum:__anon39
-RTC_Month_May	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	65;"	enumerator	enum:__anon39
-RTC_Month_November	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	71;"	enumerator	enum:__anon39
-RTC_Month_October	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	70;"	enumerator	enum:__anon39
-RTC_Month_September	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	69;"	enumerator	enum:__anon39
-RTC_Month_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	74;"	typedef	typeref:enum:__anon39
+RTC_Init	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	189;"	function	signature:(RTC_InitTypeDef* RTC_InitStruct)
+RTC_InitTypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	397;"	typedef	typeref:struct:__anon64
+RTC_Minutes	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	416;"	member	struct:__anon65
+RTC_Month	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	437;"	member	struct:__anon66
+RTC_Month_April	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	64;"	enumerator	enum:__anon40
+RTC_Month_August	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	68;"	enumerator	enum:__anon40
+RTC_Month_December	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	72;"	enumerator	enum:__anon40
+RTC_Month_February	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	62;"	enumerator	enum:__anon40
+RTC_Month_January	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	61;"	enumerator	enum:__anon40
+RTC_Month_July	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	67;"	enumerator	enum:__anon40
+RTC_Month_June	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	66;"	enumerator	enum:__anon40
+RTC_Month_March	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	63;"	enumerator	enum:__anon40
+RTC_Month_May	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	65;"	enumerator	enum:__anon40
+RTC_Month_November	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	71;"	enumerator	enum:__anon40
+RTC_Month_October	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	70;"	enumerator	enum:__anon40
+RTC_Month_September	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	69;"	enumerator	enum:__anon40
+RTC_Month_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	74;"	typedef	typeref:enum:__anon40
 RTC_OutputConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	767;"	prototype	signature:(RTC_Output_TypeDef RTC_Output, RTC_OutputPolarity_TypeDef RTC_OutputPolarity)
-RTC_OutputPolarity_High	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	174;"	enumerator	enum:__anon47
-RTC_OutputPolarity_Low	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	175;"	enumerator	enum:__anon47
-RTC_OutputPolarity_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	177;"	typedef	typeref:enum:__anon47
-RTC_Output_Alarm	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	163;"	enumerator	enum:__anon46
-RTC_Output_Disable	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	162;"	enumerator	enum:__anon46
-RTC_Output_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	166;"	typedef	typeref:enum:__anon46
-RTC_Output_WakeUp	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	164;"	enumerator	enum:__anon46
+RTC_OutputConfig	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1261;"	function	signature:(RTC_Output_TypeDef RTC_Output, RTC_OutputPolarity_TypeDef RTC_OutputPolarity)
+RTC_OutputPolarity_High	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	174;"	enumerator	enum:__anon48
+RTC_OutputPolarity_Low	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	175;"	enumerator	enum:__anon48
+RTC_OutputPolarity_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	177;"	typedef	typeref:enum:__anon48
+RTC_Output_Alarm	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	163;"	enumerator	enum:__anon47
+RTC_Output_Disable	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	162;"	enumerator	enum:__anon47
+RTC_Output_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	166;"	typedef	typeref:enum:__anon47
+RTC_Output_WakeUp	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	164;"	enumerator	enum:__anon47
 RTC_RatioCmd	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	736;"	prototype	signature:(FunctionalState NewState)
+RTC_RatioCmd	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	483;"	function	signature:(FunctionalState NewState)
 RTC_SHIFTRH_ADD1S	stm8l15x_stdperiph_driver\inc\stm8l15x.h	459;"	macro
 RTC_SHIFTRH_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	367;"	macro
 RTC_SHIFTRH_SUBFS	stm8l15x_stdperiph_driver\inc\stm8l15x.h	460;"	macro
@@ -1599,28 +1638,35 @@ RTC_SHIFTRL_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	368;"	macro
 RTC_SHIFTRL_SUBFS	stm8l15x_stdperiph_driver\inc\stm8l15x.h	463;"	macro
 RTC_SPRERH_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	353;"	macro
 RTC_SPRERL_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	354;"	macro
-RTC_Seconds	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	421;"	member	struct:__anon64
+RTC_Seconds	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	421;"	member	struct:__anon65
 RTC_SetAlarm	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	750;"	prototype	signature:(RTC_Format_TypeDef RTC_Format, RTC_AlarmTypeDef* RTC_AlarmStruct)
+RTC_SetAlarm	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	904;"	function	signature:(RTC_Format_TypeDef RTC_Format, RTC_AlarmTypeDef* RTC_AlarmStruct)
 RTC_SetDate	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	743;"	prototype	signature:(RTC_Format_TypeDef RTC_Format, RTC_DateTypeDef* RTC_DateStruct)
+RTC_SetDate	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	714;"	function	signature:(RTC_Format_TypeDef RTC_Format, RTC_DateTypeDef* RTC_DateStruct)
 RTC_SetTime	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	742;"	prototype	signature:(RTC_Format_TypeDef RTC_Format, RTC_TimeTypeDef* RTC_TimeStruct)
+RTC_SetTime	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	516;"	function	signature:(RTC_Format_TypeDef RTC_Format, RTC_TimeTypeDef* RTC_TimeStruct)
 RTC_SetWakeUpCounter	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	757;"	prototype	signature:(uint16_t RTC_WakeupCounter)
-RTC_ShiftAdd1S_Reset	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	346;"	enumerator	enum:__anon60
-RTC_ShiftAdd1S_Set	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	345;"	enumerator	enum:__anon60
-RTC_ShiftAdd1S_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	349;"	typedef	typeref:enum:__anon60
+RTC_SetWakeUpCounter	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1166;"	function	signature:(uint16_t RTC_WakeupCounter)
+RTC_ShiftAdd1S_Reset	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	346;"	enumerator	enum:__anon61
+RTC_ShiftAdd1S_Set	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	345;"	enumerator	enum:__anon61
+RTC_ShiftAdd1S_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	349;"	typedef	typeref:enum:__anon61
 RTC_SmoothCalibConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	795;"	prototype	signature:(RTC_SmoothCalibPeriod_TypeDef RTC_SmoothCalibPeriod, RTC_SmoothCalibPlusPulses_TypeDef RTC_SmoothCalibPlusPulses, uint16_t RTC_SmouthCalibMinusPulsesValue)
-RTC_SmoothCalibPeriod_16sec	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	360;"	enumerator	enum:__anon61
-RTC_SmoothCalibPeriod_32sec	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	359;"	enumerator	enum:__anon61
-RTC_SmoothCalibPeriod_8sec	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	361;"	enumerator	enum:__anon61
-RTC_SmoothCalibPeriod_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	363;"	typedef	typeref:enum:__anon61
-RTC_SmoothCalibPlusPulses_Reset	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	372;"	enumerator	enum:__anon62
-RTC_SmoothCalibPlusPulses_Set	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	371;"	enumerator	enum:__anon62
-RTC_SmoothCalibPlusPulses_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	375;"	typedef	typeref:enum:__anon62
-RTC_StoreOperation_Reset	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	204;"	enumerator	enum:__anon50
-RTC_StoreOperation_Set	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	203;"	enumerator	enum:__anon50
-RTC_StoreOperation_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	206;"	typedef	typeref:enum:__anon50
+RTC_SmoothCalibConfig	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1542;"	function	signature:(RTC_SmoothCalibPeriod_TypeDef RTC_SmoothCalibPeriod, RTC_SmoothCalibPlusPulses_TypeDef RTC_SmoothCalibPlusPulses, uint16_t RTC_SmouthCalibMinusPulsesValue)
+RTC_SmoothCalibPeriod_16sec	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	360;"	enumerator	enum:__anon62
+RTC_SmoothCalibPeriod_32sec	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	359;"	enumerator	enum:__anon62
+RTC_SmoothCalibPeriod_8sec	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	361;"	enumerator	enum:__anon62
+RTC_SmoothCalibPeriod_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	363;"	typedef	typeref:enum:__anon62
+RTC_SmoothCalibPlusPulses_Reset	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	372;"	enumerator	enum:__anon63
+RTC_SmoothCalibPlusPulses_Set	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	371;"	enumerator	enum:__anon63
+RTC_SmoothCalibPlusPulses_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	375;"	typedef	typeref:enum:__anon63
+RTC_StoreOperation_Reset	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	204;"	enumerator	enum:__anon51
+RTC_StoreOperation_Set	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	203;"	enumerator	enum:__anon51
+RTC_StoreOperation_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	206;"	typedef	typeref:enum:__anon51
 RTC_StructInit	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	730;"	prototype	signature:(RTC_InitTypeDef* RTC_InitStruct)
-RTC_SynchPrediv	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	394;"	member	struct:__anon63
+RTC_StructInit	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	239;"	function	signature:(RTC_InitTypeDef* RTC_InitStruct)
+RTC_SynchPrediv	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	394;"	member	struct:__anon64
 RTC_SynchroShiftConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	791;"	prototype	signature:(RTC_ShiftAdd1S_TypeDef RTC_ShiftAdd1S, uint16_t RTC_ShiftSubFS)
+RTC_SynchroShiftConfig	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1483;"	function	signature:(RTC_ShiftAdd1S_TypeDef RTC_ShiftAdd1S, uint16_t RTC_ShiftSubFS)
 RTC_TCR1_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	377;"	macro
 RTC_TCR1_TAMP1E	stm8l15x_stdperiph_driver\inc\stm8l15x.h	514;"	macro
 RTC_TCR1_TAMP1LEVEL	stm8l15x_stdperiph_driver\inc\stm8l15x.h	513;"	macro
@@ -1645,42 +1691,48 @@ RTC_TR3_HU	stm8l15x_stdperiph_driver\inc\stm8l15x.h	399;"	macro
 RTC_TR3_PM	stm8l15x_stdperiph_driver\inc\stm8l15x.h	397;"	macro
 RTC_TR3_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	340;"	macro
 RTC_TamperCmd	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	781;"	prototype	signature:(RTC_Tamper_TypeDef RTC_Tamper, FunctionalState NewState)
+RTC_TamperCmd	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1444;"	function	signature:(RTC_Tamper_TypeDef RTC_Tamper, FunctionalState NewState)
 RTC_TamperFilterConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	776;"	prototype	signature:(RTC_TamperFilter_TypeDef RTC_TamperFilter)
-RTC_TamperFilter_1Sample	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	312;"	enumerator	enum:__anon58
-RTC_TamperFilter_2Sample	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	313;"	enumerator	enum:__anon58
-RTC_TamperFilter_4Sample	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	314;"	enumerator	enum:__anon58
-RTC_TamperFilter_8Sample	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	315;"	enumerator	enum:__anon58
-RTC_TamperFilter_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	317;"	typedef	typeref:enum:__anon58
+RTC_TamperFilterConfig	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1329;"	function	signature:(RTC_TamperFilter_TypeDef RTC_TamperFilter)
+RTC_TamperFilter_1Sample	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	312;"	enumerator	enum:__anon59
+RTC_TamperFilter_2Sample	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	313;"	enumerator	enum:__anon59
+RTC_TamperFilter_4Sample	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	314;"	enumerator	enum:__anon59
+RTC_TamperFilter_8Sample	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	315;"	enumerator	enum:__anon59
+RTC_TamperFilter_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	317;"	typedef	typeref:enum:__anon59
 RTC_TamperLevelConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	779;"	prototype	signature:(RTC_Tamper_TypeDef RTC_Tamper, RTC_TamperLevel_TypeDef RTC_TamperLevel)
-RTC_TamperLevel_High	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	262;"	enumerator	enum:__anon54
-RTC_TamperLevel_Low	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	261;"	enumerator	enum:__anon54
-RTC_TamperLevel_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	264;"	typedef	typeref:enum:__anon54
+RTC_TamperLevelConfig	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1410;"	function	signature:(RTC_Tamper_TypeDef RTC_Tamper, RTC_TamperLevel_TypeDef RTC_TamperLevel)
+RTC_TamperLevel_High	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	262;"	enumerator	enum:__anon55
+RTC_TamperLevel_Low	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	261;"	enumerator	enum:__anon55
+RTC_TamperLevel_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	264;"	typedef	typeref:enum:__anon55
 RTC_TamperPinsPrechargeDuration	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	778;"	prototype	signature:(RTC_TamperPrechargeDuration_TypeDef RTC_TamperPrechargeDuration)
-RTC_TamperPrechargeDuration_1RTCCLK	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	298;"	enumerator	enum:__anon57
-RTC_TamperPrechargeDuration_2RTCCLK	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	299;"	enumerator	enum:__anon57
-RTC_TamperPrechargeDuration_4RTCCLK	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	300;"	enumerator	enum:__anon57
-RTC_TamperPrechargeDuration_8RTCCLK	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	301;"	enumerator	enum:__anon57
-RTC_TamperPrechargeDuration_None	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	297;"	enumerator	enum:__anon57
-RTC_TamperPrechargeDuration_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	303;"	typedef	typeref:enum:__anon57
+RTC_TamperPinsPrechargeDuration	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1382;"	function	signature:(RTC_TamperPrechargeDuration_TypeDef RTC_TamperPrechargeDuration)
+RTC_TamperPrechargeDuration_1RTCCLK	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	298;"	enumerator	enum:__anon58
+RTC_TamperPrechargeDuration_2RTCCLK	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	299;"	enumerator	enum:__anon58
+RTC_TamperPrechargeDuration_4RTCCLK	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	300;"	enumerator	enum:__anon58
+RTC_TamperPrechargeDuration_8RTCCLK	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	301;"	enumerator	enum:__anon58
+RTC_TamperPrechargeDuration_None	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	297;"	enumerator	enum:__anon58
+RTC_TamperPrechargeDuration_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	303;"	typedef	typeref:enum:__anon58
 RTC_TamperSamplingFreqConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	777;"	prototype	signature:(RTC_TamperSamplingFreq_TypeDef RTC_TamperSamplingFreq)
-RTC_TamperSamplingFreq_RTCCLK_Div1024	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	332;"	enumerator	enum:__anon59
-RTC_TamperSamplingFreq_RTCCLK_Div16384	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	328;"	enumerator	enum:__anon59
-RTC_TamperSamplingFreq_RTCCLK_Div2048	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	331;"	enumerator	enum:__anon59
-RTC_TamperSamplingFreq_RTCCLK_Div256	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	334;"	enumerator	enum:__anon59
-RTC_TamperSamplingFreq_RTCCLK_Div32768	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	327;"	enumerator	enum:__anon59
-RTC_TamperSamplingFreq_RTCCLK_Div4096	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	330;"	enumerator	enum:__anon59
-RTC_TamperSamplingFreq_RTCCLK_Div512	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	333;"	enumerator	enum:__anon59
-RTC_TamperSamplingFreq_RTCCLK_Div8192	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	329;"	enumerator	enum:__anon59
-RTC_TamperSamplingFreq_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	336;"	typedef	typeref:enum:__anon59
-RTC_TamperState_Disable	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	272;"	enumerator	enum:__anon55
-RTC_TamperState_Enable	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	273;"	enumerator	enum:__anon55
-RTC_TamperState_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	275;"	typedef	typeref:enum:__anon55
-RTC_Tamper_1	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	284;"	enumerator	enum:__anon56
-RTC_Tamper_2	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	285;"	enumerator	enum:__anon56
-RTC_Tamper_3	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	286;"	enumerator	enum:__anon56
-RTC_Tamper_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	288;"	typedef	typeref:enum:__anon56
+RTC_TamperSamplingFreqConfig	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1356;"	function	signature:(RTC_TamperSamplingFreq_TypeDef RTC_TamperSamplingFreq)
+RTC_TamperSamplingFreq_RTCCLK_Div1024	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	332;"	enumerator	enum:__anon60
+RTC_TamperSamplingFreq_RTCCLK_Div16384	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	328;"	enumerator	enum:__anon60
+RTC_TamperSamplingFreq_RTCCLK_Div2048	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	331;"	enumerator	enum:__anon60
+RTC_TamperSamplingFreq_RTCCLK_Div256	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	334;"	enumerator	enum:__anon60
+RTC_TamperSamplingFreq_RTCCLK_Div32768	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	327;"	enumerator	enum:__anon60
+RTC_TamperSamplingFreq_RTCCLK_Div4096	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	330;"	enumerator	enum:__anon60
+RTC_TamperSamplingFreq_RTCCLK_Div512	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	333;"	enumerator	enum:__anon60
+RTC_TamperSamplingFreq_RTCCLK_Div8192	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	329;"	enumerator	enum:__anon60
+RTC_TamperSamplingFreq_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	336;"	typedef	typeref:enum:__anon60
+RTC_TamperState_Disable	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	272;"	enumerator	enum:__anon56
+RTC_TamperState_Enable	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	273;"	enumerator	enum:__anon56
+RTC_TamperState_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	275;"	typedef	typeref:enum:__anon56
+RTC_Tamper_1	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	284;"	enumerator	enum:__anon57
+RTC_Tamper_2	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	285;"	enumerator	enum:__anon57
+RTC_Tamper_3	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	286;"	enumerator	enum:__anon57
+RTC_Tamper_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	288;"	typedef	typeref:enum:__anon57
 RTC_TimeStructInit	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	740;"	prototype	signature:(RTC_TimeTypeDef* RTC_TimeStruct)
-RTC_TimeTypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	428;"	typedef	typeref:struct:__anon64
+RTC_TimeStructInit	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	257;"	function	signature:(RTC_TimeTypeDef* RTC_TimeStruct)
+RTC_TimeTypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	428;"	typedef	typeref:struct:__anon65
 RTC_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x.h	333;"	typedef	typeref:struct:RTC_struct
 RTC_WPR_DisableKey1	stm8l15x_stdperiph_driver\inc\stm8l15x.h	526;"	macro
 RTC_WPR_DisableKey2	stm8l15x_stdperiph_driver\inc\stm8l15x.h	527;"	macro
@@ -1689,26 +1741,30 @@ RTC_WPR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	360;"	macro
 RTC_WUTRH_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	357;"	macro
 RTC_WUTRL_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	358;"	macro
 RTC_WaitForSynchro	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	734;"	prototype	signature:(void)
+RTC_WaitForSynchro	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	397;"	function	signature:(void)
 RTC_WakeUpClockConfig	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	756;"	prototype	signature:(RTC_WakeUpClock_TypeDef RTC_WakeUpClock)
-RTC_WakeUpClock_CK_SPRE_16bits	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	153;"	enumerator	enum:__anon45
-RTC_WakeUpClock_CK_SPRE_17bits	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	154;"	enumerator	enum:__anon45
-RTC_WakeUpClock_RTCCLK_Div16	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	149;"	enumerator	enum:__anon45
-RTC_WakeUpClock_RTCCLK_Div2	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	152;"	enumerator	enum:__anon45
-RTC_WakeUpClock_RTCCLK_Div4	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	151;"	enumerator	enum:__anon45
-RTC_WakeUpClock_RTCCLK_Div8	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	150;"	enumerator	enum:__anon45
-RTC_WakeUpClock_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	156;"	typedef	typeref:enum:__anon45
+RTC_WakeUpClockConfig	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1136;"	function	signature:(RTC_WakeUpClock_TypeDef RTC_WakeUpClock)
+RTC_WakeUpClock_CK_SPRE_16bits	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	153;"	enumerator	enum:__anon46
+RTC_WakeUpClock_CK_SPRE_17bits	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	154;"	enumerator	enum:__anon46
+RTC_WakeUpClock_RTCCLK_Div16	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	149;"	enumerator	enum:__anon46
+RTC_WakeUpClock_RTCCLK_Div2	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	152;"	enumerator	enum:__anon46
+RTC_WakeUpClock_RTCCLK_Div4	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	151;"	enumerator	enum:__anon46
+RTC_WakeUpClock_RTCCLK_Div8	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	150;"	enumerator	enum:__anon46
+RTC_WakeUpClock_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	156;"	typedef	typeref:enum:__anon46
 RTC_WakeUpCmd	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	759;"	prototype	signature:(FunctionalState NewState)
-RTC_WeekDay	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	435;"	member	struct:__anon65
-RTC_Weekday_Friday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	49;"	enumerator	enum:__anon38
-RTC_Weekday_Monday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	45;"	enumerator	enum:__anon38
-RTC_Weekday_Saturday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	50;"	enumerator	enum:__anon38
-RTC_Weekday_Sunday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	51;"	enumerator	enum:__anon38
-RTC_Weekday_Thursday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	48;"	enumerator	enum:__anon38
-RTC_Weekday_Tuesday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	46;"	enumerator	enum:__anon38
-RTC_Weekday_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	53;"	typedef	typeref:enum:__anon38
-RTC_Weekday_Wednesday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	47;"	enumerator	enum:__anon38
+RTC_WakeUpCmd	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	1206;"	function	signature:(FunctionalState NewState)
+RTC_WeekDay	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	435;"	member	struct:__anon66
+RTC_Weekday_Friday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	49;"	enumerator	enum:__anon39
+RTC_Weekday_Monday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	45;"	enumerator	enum:__anon39
+RTC_Weekday_Saturday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	50;"	enumerator	enum:__anon39
+RTC_Weekday_Sunday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	51;"	enumerator	enum:__anon39
+RTC_Weekday_Thursday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	48;"	enumerator	enum:__anon39
+RTC_Weekday_Tuesday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	46;"	enumerator	enum:__anon39
+RTC_Weekday_TypeDef	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	53;"	typedef	typeref:enum:__anon39
+RTC_Weekday_Wednesday	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	47;"	enumerator	enum:__anon39
 RTC_WriteProtectionCmd	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	735;"	prototype	signature:(FunctionalState NewState)
-RTC_Year	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	445;"	member	struct:__anon65
+RTC_WriteProtectionCmd	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	430;"	function	signature:(FunctionalState NewState)
+RTC_Year	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	445;"	member	struct:__anon66
 RTC_struct	stm8l15x_stdperiph_driver\inc\stm8l15x.h	269;"	struct
 RXCRCR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1496;"	member	struct:SPI_struct
 S16_MAX	stm8l15x_stdperiph_driver\inc\stm8l15x.h	222;"	macro
@@ -1718,9 +1774,10 @@ S32_MIN	stm8l15x_stdperiph_driver\inc\stm8l15x.h	226;"	macro
 S8_MAX	stm8l15x_stdperiph_driver\inc\stm8l15x.h	219;"	macro
 S8_MIN	stm8l15x_stdperiph_driver\inc\stm8l15x.h	220;"	macro
 SCSR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	707;"	member	struct:CLK_struct
-SET	stm8l15x_stdperiph_driver\inc\stm8l15x.h	211;"	enumerator	enum:__anon2
+SET	stm8l15x_stdperiph_driver\inc\stm8l15x.h	211;"	enumerator	enum:__anon3
 SHIFTRH	stm8l15x_stdperiph_driver\inc\stm8l15x.h	311;"	member	struct:RTC_struct
 SHIFTRL	stm8l15x_stdperiph_driver\inc\stm8l15x.h	312;"	member	struct:RTC_struct
+SHPF_TIMEOUT	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	36;"	macro	file:
 SMCR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1564;"	member	struct:TIM1_struct
 SMCR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1800;"	member	struct:TIM_struct
 SMCR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1982;"	member	struct:TIM4_struct
@@ -1786,7 +1843,7 @@ SR3	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1057;"	member	struct:I2C_struct
 SSRH	stm8l15x_stdperiph_driver\inc\stm8l15x.h	306;"	member	struct:RTC_struct
 SSRL	stm8l15x_stdperiph_driver\inc\stm8l15x.h	307;"	member	struct:RTC_struct
 STRINGVECTOR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2788;"	macro
-SUCCESS	stm8l15x_stdperiph_driver\inc\stm8l15x.h	216;"	enumerator	enum:__anon4
+SUCCESS	stm8l15x_stdperiph_driver\inc\stm8l15x.h	216;"	enumerator	enum:__anon5
 SWCR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	709;"	member	struct:CLK_struct
 SWR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	708;"	member	struct:CLK_struct
 SWTRIGR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2257;"	member	struct:DAC_struct
@@ -1820,6 +1877,8 @@ SYSDivFactor	stm8l15x_stdperiph_driver\src\stm8l15x_clk.c	40;"	variable
 SetBit	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2819;"	macro
 TCR1	stm8l15x_stdperiph_driver\inc\stm8l15x.h	330;"	member	struct:RTC_struct
 TCR2	stm8l15x_stdperiph_driver\inc\stm8l15x.h	331;"	member	struct:RTC_struct
+TEN_VALUE_BCD	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	38;"	macro	file:
+TEN_VALUE_BIN	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	39;"	macro	file:
 TIM1	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2713;"	macro
 TIM1_ARRH_ARR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1744;"	macro
 TIM1_ARRH_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1623;"	macro
@@ -2104,7 +2163,7 @@ TR2	stm8l15x_stdperiph_driver\inc\stm8l15x.h	272;"	member	struct:RTC_struct
 TR3	stm8l15x_stdperiph_driver\inc\stm8l15x.h	273;"	member	struct:RTC_struct
 TRIGR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2164;"	member	struct:ADC_struct
 TRISER	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1061;"	member	struct:I2C_struct
-TRUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	209;"	enumerator	enum:__anon1
+TRUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	209;"	enumerator	enum:__anon2
 TXCRCR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	1497;"	member	struct:SPI_struct
 U16_MAX	stm8l15x_stdperiph_driver\inc\stm8l15x.h	221;"	macro
 U32_MAX	stm8l15x_stdperiph_driver\inc\stm8l15x.h	224;"	macro
@@ -2209,6 +2268,7 @@ WPR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	309;"	member	struct:RTC_struct
 WR	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2485;"	member	struct:WWDG_struct
 WUTRH	stm8l15x_stdperiph_driver\inc\stm8l15x.h	301;"	member	struct:RTC_struct
 WUTRL	stm8l15x_stdperiph_driver\inc\stm8l15x.h	302;"	member	struct:RTC_struct
+WUTWF_TIMEOUT	stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c	33;"	macro	file:
 WWDG	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2702;"	macro
 WWDG_BASE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2653;"	macro
 WWDG_CR_RESET_VALUE	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2493;"	macro
@@ -2244,9 +2304,9 @@ __STM8L15x_RTC_H	stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h	23;"	macro
 _stext	stm8_interrupt_vector.c	25;"	prototype	file:
 _vectab	stm8_interrupt_vector.c	27;"	variable
 assert_param	stm8l15x_stdperiph_driver\inc\stm8l15x.h	26;"	macro
-bool	stm8l15x_stdperiph_driver\inc\stm8l15x.h	209;"	typedef	typeref:enum:__anon1
-delay	main.c	123;"	function	signature:(uint32_t interval)
-digit	main.c	49;"	variable
+bool	stm8l15x_stdperiph_driver\inc\stm8l15x.h	209;"	typedef	typeref:enum:__anon2
+delay	main.c	45;"	function	signature:(uint32_t interval)
+digit	lcd.c	86;"	variable
 disableInterrupts	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2744;"	macro
 disableInterrupts	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2754;"	macro
 disableInterrupts	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2765;"	macro
@@ -2263,27 +2323,31 @@ interrupt_handler	stm8_interrupt_vector.c	12;"	member	struct:interrupt_vector	fi
 interrupt_handler_t	stm8_interrupt_vector.c	8;"	typedef	file:
 interrupt_instruction	stm8_interrupt_vector.c	11;"	member	struct:interrupt_vector	file:
 interrupt_vector	stm8_interrupt_vector.c	10;"	struct	file:
-main	main.c	130;"	function	signature:( void )
-mainLoop	main.c	112;"	function
+main	main.c	99;"	function	signature:( void )
+mainLoop	main.c	34;"	function
 nop	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2747;"	macro
 nop	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2757;"	macro
 nop	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2768;"	macro
-pixel_t	main.c	44;"	struct	file:
-pixel_t	main.c	46;"	typedef	typeref:struct:pixel_t	file:
-reg	main.c	45;"	member	struct:pixel_t	file:
+pixel_t	lcd.c	81;"	struct	file:
+pixel_t	lcd.c	83;"	typedef	typeref:struct:pixel_t	file:
+putTimeOnLCD	main.c	68;"	function
+reg	lcd.c	82;"	member	struct:pixel_t	file:
+resetTime	main.c	10;"	function
 rim	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2745;"	macro
 rim	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2755;"	macro
 rim	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2766;"	macro
 s16	stm8l15x_stdperiph_driver\inc\stm8l15x.h	201;"	typedef
 s32	stm8l15x_stdperiph_driver\inc\stm8l15x.h	200;"	typedef
 s8	stm8l15x_stdperiph_driver\inc\stm8l15x.h	202;"	typedef
-shift	main.c	46;"	member	struct:pixel_t	file:
+shift	lcd.c	83;"	member	struct:pixel_t	file:
 sim	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2746;"	macro
 sim	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2756;"	macro
 sim	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2767;"	macro
-startGpio	main.c	17;"	function
-startLcd	main.c	25;"	function
-toggle	main.c	9;"	variable
+startGpio	main.c	26;"	function
+startLcd	lcd.c	60;"	function
+startLcd	lcd.h	7;"	prototype	signature:()
+startRtc	main.c	52;"	function
+toggle	main.c	8;"	variable
 trap	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2748;"	macro
 trap	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2758;"	macro
 trap	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2769;"	macro
@@ -2293,10 +2357,14 @@ u8	stm8l15x_stdperiph_driver\inc\stm8l15x.h	206;"	typedef
 uint16_t	stm8l15x_stdperiph_driver\inc\stm8l15x.h	195;"	typedef
 uint32_t	stm8l15x_stdperiph_driver\inc\stm8l15x.h	196;"	typedef
 uint8_t	stm8l15x_stdperiph_driver\inc\stm8l15x.h	194;"	typedef
+valueToChars	main.c	60;"	function	signature:(uint8_t value, char *hiChar, char *loChar)
 wfe	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2750;"	macro
 wfe	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2760;"	macro
 wfe	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2771;"	macro
 wfi	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2749;"	macro
 wfi	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2759;"	macro
 wfi	stm8l15x_stdperiph_driver\inc\stm8l15x.h	2770;"	macro
-writeChar	main.c	89;"	function	signature:(uint16_t ch, uint8_t pos)
+writeChar	lcd.c	141;"	function	signature:(char ch, int pos, int flags)
+writeChar	lcd.h	9;"	prototype	signature:(char ch, int pos, int flags)
+writeRep	lcd.c	126;"	function	file:	signature:(uint16_t ch, uint8_t pos)
+writeTimeLoop	main.c	90;"	function

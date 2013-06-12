@@ -1,9 +1,14 @@
+stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c
 stm8l15x_stdperiph_driver\src\stm8l15x_clk.c
 stm8l15x_stdperiph_driver\src\stm8l15x_exti.c
 stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c
 stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c
+rtc.c
+lcd.c
 main.c
 stm8_interrupt_vector.c
+rtc.h
+lcd.h
 ..\..\..\..\program files\cosmic\cxstm8_32k\hstm8\mods0.h
 stm8l15x_stdperiph_driver\inc\stm8l15x.h
 stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h

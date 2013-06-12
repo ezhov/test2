@@ -1,7 +1,8 @@
+#include "lcd.h"
+
 #include "stm8l15x.h"
 
 #include "stm8l15x_lcd.h"
-#include "stm8l15x_rtc.h"
 #include "stm8l15x_clk.h"
 
 /*  =========================================================================
@@ -36,14 +37,34 @@ MSB   { 1 , 1 , 0 , 0   }
 
 */
 
+const uint16_t CapLetterMap[26]=
+    {
+        /* A      B      C      D      E      F      G      H      I  */
+        0xFE00,0x6711,0x1d00,0x4711,0x9d00,0x9c00,0x3f00,0xfa00,0x0011,
+        /* J      K      L      M      N      O      P      Q      R  */
+        0x5300,0x9844,0x1900,0x5a42,0x5a06,0x5f00,0xFC00,0x5F04,0xFC04,
+        /* S      T      U      V      W      X      Y      Z  */
+        0xAF00,0x0411,0x5b00,0x18c0,0x5a84,0x00c6,0x0052,0x05c0
+    };
+const uint16_t NumberMap[10]=
+    {
+        /* 0      1      2      3      4      5      6      7      8      9  */
+        0x5F00,0x4200,0xF500,0x6700,0xEa00,0xAF00,0xBF00,0x04600,0xFF00,0xEF00
+    };
+
+const uint16_t CapLetterMapRu[4] = 
+{
+  /* æ î ï à */
+  0x00d7, 0x5F00, 0x5e00, 0xFE00
+};
+
 void startLcd()
 {
   int i;
   long j;
+  
   CLK_PeripheralClockConfig(CLK_Peripheral_RTC, ENABLE);
   CLK_RTCClockConfig(CLK_RTCCLKSource_LSI, CLK_RTCCLKDiv_1);
-
-
   CLK_PeripheralClockConfig(CLK_Peripheral_LCD, ENABLE);
 
   LCD_Init(LCD_Prescaler_1, LCD_Divider_31, LCD_Duty_1_4, LCD_Bias_1_3, LCD_VoltageSource_Internal);
@@ -102,7 +123,7 @@ pixel_t digit[][] =
 },
 };
 
-void writeChar(uint16_t ch, uint8_t pos)
+static void writeRep(uint16_t ch, uint8_t pos)
 {
   char c[8];
   int i,j;
@@ -115,4 +136,19 @@ void writeChar(uint16_t ch, uint8_t pos)
     LCD->RAM[digit[pos][i].reg] &= ~(0x3 << digit[pos][i].shift);
     LCD->RAM[digit[pos][i].reg] |= c[i] << digit[pos][i].shift;
   }
+}
+
+void writeChar(char ch, int pos, int flags)
+{
+  uint16_t modifier = 0x00;
+  if (flags & LCD_Flag_Colon)
+    modifier |= 0x0020;
+  if (flags & LCD_Flag_Point)
+    modifier |= 0x0008;
+  if (ch >= '0' && ch <= '9')
+    writeRep(NumberMap[ch-'0'] | modifier, pos);
+  else if (ch >= 'a' && ch <= 'z')
+    writeRep(CapLetterMap[ch-'a'] | modifier, pos);
+  else if (ch >= 'A' && ch <= 'Z')
+    writeRep(CapLetterMap[ch-'A'] | modifier, pos);
 }

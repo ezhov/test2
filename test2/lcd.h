@@ -1,2 +1,8 @@
+enum
+{
+LCD_Flag_Colon = 0x01,
+LCD_Flag_Point = 0x02
+};
+
 void startLcd();
-void writeChar(uint16_t ch, uint8_t pos);
+void writeChar(char ch, int pos, int flags);
